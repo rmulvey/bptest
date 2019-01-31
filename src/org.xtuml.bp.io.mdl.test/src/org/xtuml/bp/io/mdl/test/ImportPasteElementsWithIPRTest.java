@@ -1,12 +1,4 @@
 //========================================================================
-//
-//File:      $RCSfile: ImportPasteElementsWithIPRTest.java,v $
-//Version:   $Revision: 1.4 $
-//Modified:  $Date: 2013/05/10 05:13:51 $
-//
-//(c) Copyright 2007-2014 by Mentor Graphics Corp. All rights reserved.
-//
-//========================================================================
 // Licensed under the Apache License, Version 2.0 (the "License"); you may not 
 // use this file except in compliance with the License.  You may obtain a copy 
 // of the License at
@@ -30,8 +22,6 @@ import org.eclipse.core.resources.ProjectScope;
 import org.eclipse.core.resources.ResourcesPlugin;
 import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.preferences.IScopeContext;
-import org.eclipse.swt.graphics.Point;
-import org.eclipse.ui.PlatformUI;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -39,20 +29,14 @@ import org.osgi.service.prefs.Preferences;
 import org.xtuml.bp.core.ComponentReference_c;
 import org.xtuml.bp.core.CorePlugin;
 import org.xtuml.bp.core.Gd_c;
-import org.xtuml.bp.core.Ooaofooa;
 import org.xtuml.bp.core.Package_c;
 import org.xtuml.bp.core.PackageableElement_c;
 import org.xtuml.bp.core.Pref_c;
-import org.xtuml.bp.core.common.ModelRoot;
 import org.xtuml.bp.core.ui.preferences.BridgePointProjectPreferences;
 import org.xtuml.bp.test.TestUtil;
 import org.xtuml.bp.test.common.BaseTest;
 import org.xtuml.bp.test.common.OrderedRunner;
 import org.xtuml.bp.test.common.TestingUtilities;
-import org.xtuml.bp.test.common.UITestingUtilities;
-import org.xtuml.bp.ui.graphics.editor.GraphicalEditor;
-import org.xtuml.bp.ui.graphics.editor.ModelEditor;
-import org.xtuml.bp.utilities.ui.CanvasUtilities;
 
 @RunWith(OrderedRunner.class)
 public class ImportPasteElementsWithIPRTest extends BaseTest {

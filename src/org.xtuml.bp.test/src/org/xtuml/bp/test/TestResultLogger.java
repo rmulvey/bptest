@@ -1,12 +1,4 @@
 //========================================================================
-//
-//File:      $RCSfile: TestResultLogger.java,v $
-//Version:   $Revision: 1.12 $
-//Modified:  $Date: 2013/03/13 22:18:53 $
-//
-//(c) Copyright 2004-2014 by Mentor Graphics Corp. All rights reserved.
-//
-//========================================================================
 // Licensed under the Apache License, Version 2.0 (the "License"); you may not 
 // use this file except in compliance with the License.  You may obtain a copy 
 // of the License at
@@ -24,7 +16,6 @@ package org.xtuml.bp.test;
 
 import java.io.File;
 import java.io.FileWriter;
-import java.io.IOException;
 import java.net.InetAddress;
 import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
@@ -34,8 +25,6 @@ import java.util.Map;
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
 
-import junit.framework.TestCase;
-
 import org.eclipse.core.resources.IWorkspace;
 import org.eclipse.core.resources.ResourcesPlugin;
 import org.eclipse.core.runtime.CoreException;
@@ -44,10 +33,11 @@ import org.eclipse.jdt.internal.junit.model.TestRunSession;
 import org.eclipse.jdt.junit.JUnitCore;
 import org.eclipse.jdt.junit.TestRunListener;
 import org.eclipse.jdt.junit.model.ITestElement;
-import org.eclipse.jdt.junit.model.ITestRunSession;
 import org.eclipse.jdt.junit.model.ITestElement.Result;
-
+import org.eclipse.jdt.junit.model.ITestRunSession;
 import org.xtuml.bp.core.CorePlugin;
+
+import junit.framework.TestCase;
 
 /**
  * Saves the test session into the standard XML format

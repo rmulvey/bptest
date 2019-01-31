@@ -1,10 +1,3 @@
-
-//=====================================================================
-//
-//File:      IOMdlTestGenerics.java
-//
-//(c) Copyright 2004-2014 by Mentor Graphics Corp. All rights reserved.
-//
 //=====================================================================
 // Licensed under the Apache License, Version 2.0 (the "License"); you may not 
 // use this file except in compliance with the License.  You may obtain a copy 
@@ -19,7 +12,6 @@
 // the License.
 //=====================================================================
 
-import java.io.File;
 import java.io.FileNotFoundException;
 import java.lang.reflect.InvocationTargetException;
 
@@ -27,7 +19,6 @@ import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.IPath;
 import org.eclipse.core.runtime.NullProgressMonitor;
 import org.eclipse.core.runtime.Path;
-import org.eclipse.core.runtime.Platform;
 import org.eclipse.jface.preference.IPreferenceStore;
 import org.eclipse.ui.PlatformUI;
 import org.junit.After;
@@ -51,11 +42,8 @@ import org.xtuml.bp.io.mdl.ImportModel;
 import org.xtuml.bp.test.common.BaseTest;
 import org.xtuml.bp.test.common.OrderedRunner;
 import org.xtuml.bp.test.common.TestingUtilities;
-import org.xtuml.bp.ui.canvas.Model_c;
 import org.xtuml.bp.ui.canvas.Ooaofgraphics;
 import org.xtuml.bp.utilities.ui.ProjectUtilities;
-
-import junit.framework.TestCase;
 
 @RunWith(OrderedRunner.class)
 public class IOMdlTestGenerics extends BaseTest {

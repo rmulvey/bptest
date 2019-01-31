@@ -1,11 +1,3 @@
-//=====================================================================
-//
-//File:      $RCSfile: ModelTransactionTestGenerics.java,v $
-//Version:   $Revision: 1.6 $
-//Modified:  $Date: 2013/05/10 04:30:26 $
-//
-//(c) Copyright 2006-2014 by Mentor Graphics Corp. All rights reserved.
-//
 //========================================================================
 // Licensed under the Apache License, Version 2.0 (the "License"); you may not 
 // use this file except in compliance with the License.  You may obtain a copy 
@@ -25,17 +17,9 @@ package org.xtuml.bp.core.test;
 import java.io.File;
 
 import org.eclipse.core.runtime.IPath;
-import org.eclipse.core.runtime.NullProgressMonitor;
 import org.eclipse.core.runtime.Path;
-import org.eclipse.core.runtime.Platform;
 import org.eclipse.gef.tools.AbstractTool;
-import org.eclipse.jface.action.Action;
-import org.eclipse.jface.text.BadLocationException;
-import org.eclipse.jface.text.IDocument;
-import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.jface.viewers.StructuredSelection;
-import org.eclipse.jface.wizard.IWizard;
-import org.eclipse.jface.wizard.WizardDialog;
 import org.eclipse.ui.PlatformUI;
 import org.junit.After;
 import org.junit.Before;
@@ -43,25 +27,17 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.TestName;
 import org.junit.runner.RunWith;
-import org.xtuml.bp.core.Association_c;
 import org.xtuml.bp.core.Attribute_c;
 import org.xtuml.bp.core.ClassIdentifier_c;
 import org.xtuml.bp.core.EventIgnored_c;
-import org.xtuml.bp.core.Function_c;
 import org.xtuml.bp.core.ModelClass_c;
 import org.xtuml.bp.core.Ooaofooa;
 import org.xtuml.bp.core.Package_c;
-import org.xtuml.bp.core.SystemModel_c;
 import org.xtuml.bp.core.common.ClassQueryInterface_c;
 import org.xtuml.bp.core.common.IdAssigner;
-import org.xtuml.bp.core.common.TransactionManager;
-import org.xtuml.bp.core.ui.BinaryFormalizeOnR_RELAction;
-import org.xtuml.bp.core.ui.BinaryFormalizeOnR_RELWizardPage1;
-import org.xtuml.bp.core.ui.BinaryFormalizeOnR_RELWizardPage2;
 import org.xtuml.bp.core.ui.DeleteAction;
 import org.xtuml.bp.core.ui.RemoveFromIdentifierOnO_ATTRWizard;
 import org.xtuml.bp.core.ui.Selection;
-import org.xtuml.bp.core.ui.marker.DelayedMarkerJob;
 import org.xtuml.bp.test.TestUtil;
 import org.xtuml.bp.test.common.BaseTest;
 import org.xtuml.bp.test.common.CanvasTestUtils;
@@ -69,14 +45,7 @@ import org.xtuml.bp.test.common.OrderedRunner;
 import org.xtuml.bp.test.common.TransactionListener;
 import org.xtuml.bp.test.common.UITestingUtilities;
 import org.xtuml.bp.ui.canvas.CanvasTransactionListener;
-import org.xtuml.bp.ui.canvas.Cl_c;
-import org.xtuml.bp.ui.canvas.GraphicalElement_c;
-import org.xtuml.bp.ui.canvas.Ooaofgraphics;
-import org.xtuml.bp.ui.properties.ClassO_OBJPropertySource;
 import org.xtuml.bp.ui.properties.EventIgnoredSM_EIGNPropertySource;
-import org.xtuml.bp.ui.properties.ModelPropertySourceProvider;
-import org.xtuml.bp.ui.text.activity.ActivityEditor;
-import org.xtuml.bp.ui.text.description.DescriptionEditor;
 
 @RunWith(OrderedRunner.class)
 public class ModelTransactionTestGenerics extends BaseTest {
@@ -114,21 +83,6 @@ public class ModelTransactionTestGenerics extends BaseTest {
 		CanvasTransactionListener.enableReconciler();
 	}
 	
-//	@Test
-//	public void testModelTransactionTest() throws Exception{
-//	      doTestEarlyReturnExitTransactionWizard();
-//	      doTestEarlyReturnExitTransaction();
-//	      doTestEarlyExceptionExitTransactionInProperties();
-//	      doTestShapeCreationTransactionThruCanvas();
-//	      doTestPropertyChangeTransaction();
-//	      doTestDescriptorEditorChangeTransaction();
-//	      doTestActivityEditorChangeTransaction();
-//	      doTestRenamingTransactionOnExplorer();
-//	      doTestDeleteClassTransactionFromExplorer();
-//	      doTestFormalizeSimpleAssociationTransaction();
-//	      doTestMenuItemUserAction();
-//	}
-
 	@Test
 	public void testEarlyReturnExitTransactionWizard() {
 		ModelClass_c mclass = getModelClassByName("EarlyExitA");

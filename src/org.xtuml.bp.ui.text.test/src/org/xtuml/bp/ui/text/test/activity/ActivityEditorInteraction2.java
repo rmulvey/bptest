@@ -1,12 +1,3 @@
-
-//=====================================================================
-//
-//File:      $RCSfile: ActivityEditorInteraction.java,v $
-//Version:   $Revision: 1.30 $
-//Modified:  $Date: 2013/05/10 06:02:36 $
-//
-//(c) Copyright 2004-2014 by Mentor Graphics Corp. All rights reserved.
-//
 //=====================================================================
 // Licensed under the Apache License, Version 2.0 (the "License"); you may not 
 // use this file except in compliance with the License.  You may obtain a copy 
@@ -76,10 +67,6 @@ import org.xtuml.bp.ui.text.test.UITextTest;
 @RunWith(OrderedRunner.class)
 public class ActivityEditorInteraction2 extends UITextTest {
   
-//	public ActivityEditorInteraction(String projectName, String name) throws CoreException {
-//		super(projectName, name);
-//	}
-
 	public ActivityEditorInteraction2() throws CoreException {
 		super();
 	}
@@ -87,42 +74,11 @@ public class ActivityEditorInteraction2 extends UITextTest {
 	private static boolean firstSetup = true;
 	private static String testModelName = "testDescrip1";
 	
-//	public ActivityEditorInteraction(String projectName, String name) throws CoreException {
-//		super(null, name);
-//	}
-	
-//	public ActivityEditorInteraction(String name) throws CoreException {
-//		super(null, name); //$NON-NLS-1$
-//	}
-
 	private static String m_oldActionSemantics;
 	private final static String m_updateText = "// test text \n";
 	private static long m_markerId[] = new long[4];
 	private static int m_numMarkers = 0;
 
-//	// enforce ordering of the tests in this class
-//	public void testActivityEditorInteraction() {
-//		testDirtyFlag();
-//		testUndo();
-//		testRevert();
-//		testSave();
-//		testOpenChangedDescription();
-//		testAddBookmark();
-//		testBookmarkHoverText();
-//		testAddTaskMarker();
-//		testMultipleMarkerHoverText();
-//		testDeleteBookmark();
-//		testTaskHoverText();
-//		testDeleteTask();
-//		testSyntaxError();
-//		testActivityProblemErrorHoverText();
-//		testSaveWithError();
-//		testGotoError();
-//		testMarkerErrorHoverText();
-//		testRemoveError();
-//		testRevertAfterErrorRemoved();
-//		testSaveAfterErrorRemoved();
-//	}
 	@Before
     public void setUp() throws Exception {
     	super.setUp();

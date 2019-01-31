@@ -1,12 +1,4 @@
 //=====================================================================
-//
-//File:      $RCSfile: ClassToStateDiagramNavigationTest.java,v $
-//Version:   $Revision: 1.16 $
-//Modified:  $Date: 2013/05/10 05:41:51 $
-//
-//(c) Copyright 2006-2014 by Mentor Graphics Corp. All rights reserved.
-//
-//=====================================================================
 // Licensed under the Apache License, Version 2.0 (the "License"); you may not 
 // use this file except in compliance with the License.  You may obtain a copy 
 // of the License at
@@ -22,12 +14,7 @@
 
 package org.xtuml.bp.ui.canvas.test;
 
-import org.eclipse.draw2d.IFigure;
-import org.eclipse.draw2d.Label;
-import org.eclipse.gef.editparts.AbstractGraphicalEditPart;
-import org.eclipse.swt.graphics.Point;
 import org.eclipse.ui.IEditorPart;
-import org.eclipse.ui.PlatformUI;
 import org.eclipse.ui.part.WorkbenchPart;
 import org.junit.Before;
 import org.junit.Test;
@@ -35,7 +22,6 @@ import org.junit.runner.RunWith;
 import org.xtuml.bp.core.InstanceStateMachine_c;
 import org.xtuml.bp.core.ModelClass_c;
 import org.xtuml.bp.core.Package_c;
-import org.xtuml.bp.core.PackageableElement_c;
 import org.xtuml.bp.core.common.ClassQueryInterface_c;
 import org.xtuml.bp.core.ui.NewInstanceStateMachineOnO_OBJAction;
 import org.xtuml.bp.core.ui.Selection;
@@ -46,10 +32,6 @@ import org.xtuml.bp.test.common.CanvasTestUtils;
 import org.xtuml.bp.test.common.OrderedRunner;
 import org.xtuml.bp.test.common.UITestingUtilities;
 import org.xtuml.bp.ui.canvas.Diagram_c;
-import org.xtuml.bp.ui.canvas.Graphnode_c;
-import org.xtuml.bp.ui.canvas.Ooaofgraphics;
-import org.xtuml.bp.ui.canvas.Shape_c;
-import org.xtuml.bp.ui.canvas.util.GraphNodeUtil;
 import org.xtuml.bp.ui.graphics.editor.GraphicalEditor;
 
 /**

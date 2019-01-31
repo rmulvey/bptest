@@ -1,12 +1,4 @@
 //=====================================================================
-//
-//File:      $RCSfile: OALKeywordRuleTest.java,v $
-//Version:   $Revision: 1.9 $
-//Modified:  $Date: 2013/01/10 22:46:48 $
-//
-//(c) Copyright 2004-2014 by Mentor Graphics Corp. All rights reserved.
-//
-//=====================================================================
 // Licensed under the Apache License, Version 2.0 (the "License"); you may not 
 // use this file except in compliance with the License.  You may obtain a copy 
 // of the License at
@@ -41,17 +33,9 @@ import org.xtuml.bp.ui.text.test.UITextTest;
 @RunWith(OrderedRunner.class)
 public class OALKeywordRuleTest extends UITextTest 
 {
-//    public OALKeywordRuleTest(String projectName, String name) throws CoreException {
-//		super("test", name);	 //$NON-NLS-1$
-//	}
-//    public OALKeywordRuleTest( String name) throws CoreException {
-//		super("test", name);	 //$NON-NLS-1$
-//	}
 
 	public OALKeywordRuleTest() throws CoreException {
 		super();
-//		super("test", null);	//$NON-NLS-1$
-		// TODO Auto-generated constructor stub
 	}
 
 	/**

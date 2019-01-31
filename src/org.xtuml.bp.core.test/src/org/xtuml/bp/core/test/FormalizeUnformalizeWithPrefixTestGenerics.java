@@ -1,12 +1,4 @@
 //=====================================================================
-//
-//File:      $RCSfile: FormalizeUnformalizeWithPrefixTestGenerics.java,v $
-//Version:   $Revision: 1.1.2.4 $
-//Modified:  $Date: 2013/03/25 19:20:07 $
-//
-//(c) Copyright 2007-2014 by Mentor Graphics Corp. All rights reserved.
-//
-//=====================================================================
 // Licensed under the Apache License, Version 2.0 (the "License"); you may not 
 // use this file except in compliance with the License.  You may obtain a copy 
 // of the License at
@@ -21,8 +13,6 @@
 //=====================================================================
 //
 package org.xtuml.bp.core.test;
-
-import java.util.UUID;
 
 import org.eclipse.jface.action.Action;
 import org.eclipse.jface.viewers.IStructuredSelection;
@@ -39,16 +29,13 @@ import org.xtuml.bp.core.AttributeReferenceInClass_c;
 import org.xtuml.bp.core.Attribute_c;
 import org.xtuml.bp.core.ClassAsLink_c;
 import org.xtuml.bp.core.ClassAsSimpleFormalizer_c;
-import org.xtuml.bp.core.ClassIdentifier_c;
 import org.xtuml.bp.core.ClassInAssociation_c;
 import org.xtuml.bp.core.ImportedClass_c;
 import org.xtuml.bp.core.LinkedAssociation_c;
 import org.xtuml.bp.core.ModelClass_c;
-import org.xtuml.bp.core.Ooaofooa;
 import org.xtuml.bp.core.Package_c;
 import org.xtuml.bp.core.PackageableElement_c;
 import org.xtuml.bp.core.ReferentialAttribute_c;
-import org.xtuml.bp.core.ReferredToClassInAssoc_c;
 import org.xtuml.bp.core.ReferringClassInAssoc_c;
 import org.xtuml.bp.core.SimpleAssociation_c;
 import org.xtuml.bp.core.common.ClassQueryInterface_c;
@@ -343,104 +330,6 @@ public class FormalizeUnformalizeWithPrefixTestGenerics extends CanvasTest {
 		}
 
 	}
-//	@Test
-//	public void testFormalizeUnformalizeWithPrefix(){
-//	      doTestFormalizeSimpleAssocOBJ_OBJ();
-//	      doTestFormalizeSimpleAssocOBJ_IOBJ();
-//	      doTestFormalizeSimpleAssocReflexiveOBJ();
-//	      doTestFormalizeSimpleAssocIOBJ_OBJ();
-//	      doTestFormalizeSimpleAssocIOBJ_IOBJ();
-//	      doTestFormalizeSimpleAssocReflexiveIOBJ();
-//	      doTestFormalizeASSROBJ_OBJOBJ();
-//	      doTestFormalizeASSROBJ_IOBJOBJ();
-//	      doTestFormalizeASSROBJ_IOBJIOBJ();
-//	      doTestFormalizeASSRReflexiveOBJ_OBJ();
-//	      doTestFormalizeASSRReflexiveOBJ_IOBJ();
-//	      doTestFormalizeASSRIOBJ_OBJOBJ();
-//	      doTestFormalizeASSRIOBJ_OBJIOBJ();
-//	      doTestFormalizeASSRIOBJ_IOBJIOBJ();
-//	      doTestFormalizeASSRReflexiveIOBJ_OBJ();
-//	      doTestFormalizeASSRReflexiveIOBJ_IOBJ();
-//	      doTestUnFormalizeSimpleAssocOBJ_OBJ();
-//	      doTestUnFormalizeSimpleAssocOBJ_IOBJ();
-//	      doTestUnFormalizeSimpleAssocReflexiveOBJ();
-//	      doTestUnFormalizeSimpleAssocIOBJ_OBJ();
-//	      doTestUnFormalizeSimpleAssocIOBJ_IOBJ();
-//	      doTestUnFormalizeSimpleAssocReflexiveIOBJ();
-//	      doTestUnFormalizeASSROBJ_OBJOBJ();
-//	      doTestUnFormalizeASSROBJ_IOBJOBJ();
-//	      doTestUnFormalizeASSROBJ_IOBJIOBJ();
-//	      doTestUnFormalizeASSRReflexiveOBJ_OBJ();
-//	      doTestUnFormalizeASSRReflexiveOBJ_IOBJ();
-//	      doTestUnFormalizeASSRIOBJ_OBJOBJ();
-//	      doTestUnFormalizeASSRIOBJ_OBJIOBJ();
-//	      doTestUnFormalizeASSRIOBJ_IOBJIOBJ();
-//	      doTestUnFormalizeASSRReflexiveIOBJ_OBJ();
-//	      doTestUnFormalizeASSRReflexiveIOBJ_IOBJ();
-//	      doTestFormalizeASSROBJ_OBJOBJSpecial();
-//	      doTestFormalizeASSROBJ_IOBJOBJSpecial();
-//	      doTestFormalizeASSROBJ_IOBJIOBJSpecial();
-//	      doTestFormalizeASSRReflexiveOBJ_OBJSpecial();
-//	      doTestFormalizeASSRReflexiveOBJ_IOBJSpecial();
-//	      doTestFormalizeASSRIOBJ_OBJOBJSpecial();
-//	      doTestFormalizeASSRIOBJ_OBJIOBJSpecial();
-//	      doTestFormalizeASSRIOBJ_IOBJIOBJSpecial();
-//	      doTestFormalizeASSRReflexiveIOBJ_OBJSpecial();
-//	      doTestFormalizeASSRReflexiveIOBJ_IOBJSpecial();
-//	      doTestUnFormalizeASSROBJ_OBJOBJSpecial();
-//	      doTestUnFormalizeASSROBJ_IOBJOBJSpecial();
-//	      doTestUnFormalizeASSROBJ_IOBJIOBJSpecial();
-//	      doTestUnFormalizeASSRReflexiveOBJ_OBJSpecial();
-//	      doTestUnFormalizeASSRReflexiveOBJ_IOBJSpecial();
-//	      doTestUnFormalizeASSRIOBJ_OBJOBJSpecial();
-//	      doTestUnFormalizeASSRIOBJ_OBJIOBJSpecial();
-//	      doTestUnFormalizeASSRIOBJ_IOBJIOBJSpecial();
-//	      doTestUnFormalizeASSRReflexiveIOBJ_OBJSpecial();
-//	      doTestUnFormalizeASSRReflexiveIOBJ_IOBJSpecial();
-//	      doTestUnformalizeSimpleAssocUsedRefOBJ_OBJ();
-//	      doTestUnformalizeSimpleAssocUsedRefOBJ_IOBJ();
-//	      doTestUnformalizeSimpleAssocReflexiveUsedRefOBJ_OBJ();
-//	      doTestUnformalizeSimpleAssocUsedRefIOBJ_OBJ();
-//	      doTestUnformalizeSimpleAssocUsedRefIOBJ_IOBJ();
-//	      doTestUnformalizeSimpleAssocReflexiveUsedRefIOBJ();
-//	      doTestUnformalizeASSROBJ_OBJOBJUsedRef();
-//	      doTestUnformalizeASSROBJ_OBJIOBJUsedRef();
-//	      doTestUnformalizeASSROBJ_IOBJIOBJUsedRef();
-//	      doTestUnformalizeASSRReflexiveOBJ_OBJUsedRef();
-//	      doTestUnformalizeASSRReflexiveOBJ_IOBJUsedRef();
-//	      doTestUnformalizeASSRIOBJ_OBJOBJUsedRef();
-//	      doTestUnformalizeASSRIOBJ_IOBJOBJUsedRef();
-//	      doTestUnformalizeASSRIOBJ_IOBJIOBJUsedRef();
-//	      doTestUnformalizeASSRReflexiveIOBJ_OBJUsedRef();
-//	      doTestUnformalizeASSRReflexiveIOBJ_IOBJUsedRef();
-//	      doTestUnformalizeSUBSUPUsedRefOBJ_OBJOBJ();
-//	      doTestUnformalizeSUBSUPUsedRefOBJ_IOBJOBJ();
-//	      doTestUnformalizeSUBSUPUsedRefOBJ_IOBJIOBJ();
-//	      doTestUnformalizeSUBSUPUsedRefIOBJ_OBJOBJ();
-//	      doTestUnformalizeSUBSUPUsedRefIOBJ_OBJIOBJ();
-//	      doTestUnformalizeSUBSUPUsedRefIOBJ_IOBJIOBJ();
-//	      doTestFormalizeASSROBJ_OBJOBJ_OnePrefix();
-//	      doTestFormalizeASSROBJ_IOBJOBJ_OnePrefix();
-//	      doTestFormalizeASSROBJ_IOBJIOBJ_OnePrefix();
-//	      doTestFormalizeASSRReflexiveOBJ_OBJ_OnePrefix();
-//	      doTestFormalizeASSRReflexiveOBJ_IOBJ_OnePrefix();
-//	      doTestFormalizeASSRIOBJ_OBJOBJ_OnePrefix();
-//	      doTestFormalizeASSRIOBJ_OBJIOBJ_OnePrefix();
-//	      doTestFormalizeASSRIOBJ_IOBJIOBJ_OnePrefix();
-//	      doTestFormalizeASSRReflexiveIOBJ_OBJ_OnePrefix();
-//	      doTestFormalizeASSRReflexiveIOBJ_IOBJ_OnePrefix();
-//	      doTestFormalizeASSROBJ_OBJOBJSpecial_OnePrefix();
-//	      doTestFormalizeASSROBJ_IOBJOBJSpecial_OnePrefix();
-//	      doTestFormalizeASSROBJ_IOBJIOBJSpecial_OnePrefix();
-//	      doTestFormalizeASSRReflexiveOBJ_OBJSpecial_OnePrefix();
-//	      doTestFormalizeASSRReflexiveOBJ_IOBJSpecial_OnePrefix();
-//	      doTestFormalizeASSRIOBJ_OBJOBJSpecial_OnePrefix();
-//	      doTestFormalizeASSRIOBJ_OBJIOBJSpecial_OnePrefix();
-//	      doTestFormalizeASSRIOBJ_IOBJIOBJSpecial_OnePrefix();
-//	      doTestFormalizeASSRReflexiveIOBJ_OBJSpecial_OnePrefix();
-//	      doTestFormalizeASSRReflexiveIOBJ_IOBJSpecial_OnePrefix();
-//	      doTestFormalizeActionFilter();
-//	}
 	@Test
 	public void testFormalizeSimpleAssocOBJ_OBJ() {
 		test_id = "test_1";

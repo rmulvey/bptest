@@ -19,7 +19,6 @@ import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Control;
 import org.eclipse.swt.widgets.Event;
 import org.eclipse.swt.widgets.TableItem;
-import org.eclipse.ui.PlatformUI;
 import org.junit.FixMethodOrder;
 import org.junit.Test;
 import org.xtuml.bp.core.Association_c;

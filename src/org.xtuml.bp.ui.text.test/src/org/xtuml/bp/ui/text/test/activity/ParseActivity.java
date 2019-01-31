@@ -1,12 +1,3 @@
-
-//=====================================================================
-//
-//File:      $RCSfile: ParseActivity.java,v $
-//Version:   $Revision: 1.26 $
-//Modified:  $Date: 2013/05/10 06:02:36 $
-//
-//(c) Copyright 2004-2014 by Mentor Graphics Corp. All rights reserved.
-//
 //=====================================================================
 // Licensed under the Apache License, Version 2.0 (the "License"); you may not 
 // use this file except in compliance with the License.  You may obtain a copy 
@@ -66,14 +57,6 @@ public class ParseActivity extends UITextTest {
 	private static boolean firstSetup = true;
 	private static String testModelName = "testDescrip1";
 	
-//	public ParseActivity(String projectName, String name) throws CoreException {
-//		super(null, name); //$NON-NLS-1$
-//	}
-//	
-//	public ParseActivity(String name) throws CoreException {
-//		super(null, name); //$NON-NLS-1$
-//	}
-
 	static IWorkbenchPage m_wp = null;
 	
     @Before

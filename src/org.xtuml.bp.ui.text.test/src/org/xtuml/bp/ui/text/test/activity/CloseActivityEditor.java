@@ -1,12 +1,3 @@
-
-//=====================================================================
-//
-//File:      $RCSfile: CloseActivityEditor.java,v $
-//Version:   $Revision: 1.15 $
-//Modified:  $Date: 2013/01/10 22:46:35 $
-//
-//(c) Copyright 2004-2014 by Mentor Graphics Corp. All rights reserved.
-//
 //=====================================================================
 // Licensed under the Apache License, Version 2.0 (the "License"); you may not 
 // use this file except in compliance with the License.  You may obtain a copy 
@@ -35,17 +26,8 @@ import org.xtuml.bp.ui.text.test.UITextTest;
 public class CloseActivityEditor extends UITextTest {
 
 	public CloseActivityEditor() throws CoreException {
-//		super("test", null); //$NON-NLS-1$
 		super();
-		// TODO Auto-generated constructor stub
 	}
-	//	public CloseActivityEditor(String projectName, String name) throws CoreException {
-//		super("test", name); //$NON-NLS-1$
-//	}
-//	
-//	public CloseActivityEditor(String name) throws CoreException {
-//		super("test", name); //$NON-NLS-1$
-//	}
 	private void closeActivityEditor( String title )
 	{
 		ActivityEditor ae = TextEditorUtils.getActivityEditor(title);

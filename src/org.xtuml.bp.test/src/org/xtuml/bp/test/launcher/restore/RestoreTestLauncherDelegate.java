@@ -1,12 +1,4 @@
 //========================================================================
-//
-//File:      $RCSfile: RestoreTestLauncherDelegate.java,v $
-//Version:   $Revision: 1.8 $
-//Modified:  $Date: 2013/01/10 23:21:33 $
-//
-//(c) Copyright 2004-2014 by Mentor Graphics Corp. All rights reserved.
-//
-//========================================================================
 // Licensed under the Apache License, Version 2.0 (the "License"); you may not 
 // use this file except in compliance with the License.  You may obtain a copy 
 // of the License at
@@ -71,7 +63,6 @@ public class RestoreTestLauncherDelegate extends JavaLaunchDelegate implements
 
     public RestoreTestLauncherDelegate() {
         super();
-        // TODO Auto-generated constructor stub
     }
 
     public void launch(ILaunchConfiguration configuration, String mode,
@@ -244,61 +235,49 @@ public class RestoreTestLauncherDelegate extends JavaLaunchDelegate implements
 
         public RestoreDebugTarget() {
             super();
-            // TODO Auto-generated constructor stub
         }
 
         public IProcess getProcess() {
-            // TODO Auto-generated method stub
             return null;
         }
 
         public IThread[] getThreads() throws DebugException {
-            // TODO Auto-generated method stub
             return new IThread[0];
         }
 
         public boolean hasThreads() throws DebugException {
-            // TODO Auto-generated method stub
             return false;
         }
 
         public String getName() throws DebugException {
-            // TODO Auto-generated method stub
             return "Restore Tests";
         }
 
         public boolean supportsBreakpoint(IBreakpoint breakpoint) {
-            // TODO Auto-generated method stub
             return false;
         }
 
         public String getModelIdentifier() {
-            // TODO Auto-generated method stub
             return null;
         }
 
         public IDebugTarget getDebugTarget() {
-            // TODO Auto-generated method stub
             return this;
         }
 
         public ILaunch getLaunch() {
-            // TODO Auto-generated method stub
             return restoreTestLaunch;
         }
 
         public Object getAdapter(Class adapter) {
-            // TODO Auto-generated method stub
             return null;
         }
 
         public boolean canTerminate() {
-            // TODO Auto-generated method stub
             return !isTerminated;
         }
 
         public boolean isTerminated() {
-            // TODO Auto-generated method stub
             return isTerminated;
         }
 
@@ -310,68 +289,55 @@ public class RestoreTestLauncherDelegate extends JavaLaunchDelegate implements
         }
 
         public boolean canResume() {
-            // TODO Auto-generated method stub
             return false;
         }
 
         public boolean canSuspend() {
-            // TODO Auto-generated method stub
             return false;
         }
 
         public boolean isSuspended() {
-            // TODO Auto-generated method stub
             return false;
         }
 
         public void resume() throws DebugException {
-            // TODO Auto-generated method stub
 
         }
 
         public void suspend() throws DebugException {
-            // TODO Auto-generated method stub
 
         }
 
         public void breakpointAdded(IBreakpoint breakpoint) {
-            // TODO Auto-generated method stub
 
         }
 
         public void breakpointRemoved(IBreakpoint breakpoint, IMarkerDelta delta) {
-            // TODO Auto-generated method stub
 
         }
 
         public void breakpointChanged(IBreakpoint breakpoint, IMarkerDelta delta) {
-            // TODO Auto-generated method stub
 
         }
 
         public boolean canDisconnect() {
-            // TODO Auto-generated method stub
             return false;
         }
 
         public void disconnect() throws DebugException {
-            // TODO Auto-generated method stub
 
         }
 
         public boolean isDisconnected() {
-            // TODO Auto-generated method stub
             return false;
         }
 
         public boolean supportsStorageRetrieval() {
-            // TODO Auto-generated method stub
             return false;
         }
 
         public IMemoryBlock getMemoryBlock(long startAddress, long length)
                 throws DebugException {
-            // TODO Auto-generated method stub
             return null;
         }
 

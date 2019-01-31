@@ -28,14 +28,9 @@ import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.NullProgressMonitor;
 import org.eclipse.core.runtime.Path;
 import org.eclipse.core.runtime.Platform;
-import org.eclipse.jface.viewers.StructuredSelection;
 import org.eclipse.swt.graphics.Point;
-import org.eclipse.swt.widgets.Control;
-import org.eclipse.swt.widgets.Tree;
 import org.eclipse.swt.widgets.TreeItem;
-import org.eclipse.ui.IViewPart;
 import org.eclipse.ui.PlatformUI;
-import org.eclipse.ui.navigator.CommonNavigator;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Rule;
@@ -91,15 +86,12 @@ import org.xtuml.bp.test.common.CompareTestUtilities;
 import org.xtuml.bp.test.common.GitUtil;
 import org.xtuml.bp.test.common.OrderedRunner;
 import org.xtuml.bp.test.common.TestingUtilities;
-import org.xtuml.bp.test.common.UITestingUtilities;
 import org.xtuml.bp.test.common.ZipUtil;
 import org.xtuml.bp.ui.canvas.Connector_c;
 import org.xtuml.bp.ui.canvas.GraphicalElement_c;
 import org.xtuml.bp.ui.canvas.Model_c;
 import org.xtuml.bp.ui.canvas.Ooaofgraphics;
 import org.xtuml.bp.ui.canvas.Shape_c;
-
-import junit.framework.TestCase;
 
 @RunWith(OrderedRunner.class)
 public class ModelMergeTests extends BaseTest {

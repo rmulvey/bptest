@@ -1,12 +1,4 @@
 //========================================================================
-//
-//File:      $RCSfile: TestReflexiveConnectorCreation.java,v $
-//Version:   $Revision: 1.5 $
-//Modified:  $Date: 2013/01/10 22:43:50 $
-//
-//(c) Copyright 2005-2014 by Mentor Graphics Corp. All rights reserved.
-//
-//========================================================================
 // Licensed under the Apache License, Version 2.0 (the "License"); you may not 
 // use this file except in compliance with the License.  You may obtain a copy 
 // of the License at
@@ -26,7 +18,6 @@ import org.eclipse.draw2d.geometry.PointList;
 import org.eclipse.draw2d.geometry.Rectangle;
 import org.eclipse.gef.GraphicalEditPart;
 import org.eclipse.gef.tools.AbstractTool;
-import org.eclipse.ui.PlatformUI;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Rule;
@@ -42,7 +33,6 @@ import org.xtuml.bp.core.common.TransactionException;
 import org.xtuml.bp.core.util.WorkspaceUtil;
 import org.xtuml.bp.test.common.BaseTest;
 import org.xtuml.bp.test.common.OrderedRunner;
-import org.xtuml.bp.test.common.TestingUtilities;
 import org.xtuml.bp.test.common.UITestingUtilities;
 import org.xtuml.bp.ui.canvas.Connector_c;
 import org.xtuml.bp.ui.canvas.GraphicalElement_c;
@@ -59,7 +49,6 @@ public class TestReflexiveConnectorCreation extends BaseTest {
 	private static boolean isFirstTime = true;
 	
 	@Override
-//	@Before
 	public void initialSetup() throws Exception {
 		if (!isFirstTime )
 			return;
@@ -86,13 +75,6 @@ public class TestReflexiveConnectorCreation extends BaseTest {
 		ConnectorEditPart.setToleranceForTests(-1);
 	}
 
-	// Enforce order of tests run in this class
-	
-//	public void testReflexiveConnectorCreation() throws TransactionException {
-//		testReflexiveConnectorCreationOnMouseUp();
-//		testReflexiveCornerNonIntersectionWithShape();
-//		testReflexiveConnectorOnConnector();
-//	}
 	@Test
 	public void testReflexiveConnectorCreationOnMouseUp()
 			throws TransactionException {

@@ -1,12 +1,4 @@
 //========================================================================
-//
-//File:      $RCSfile: AssignClassTestGenerics.java,v $
-//Version:   $Revision: 1.6 $
-//Modified:  $Date: 2013/05/10 04:30:26 $
-//
-//(c) Copyright 2004-2014 by Mentor Graphics Corp. All rights reserved.
-//
-//========================================================================
 // Licensed under the Apache License, Version 2.0 (the "License"); you may not 
 // use this file except in compliance with the License.  You may obtain a copy 
 // of the License at
@@ -95,12 +87,6 @@ public class AssignClassTestGenerics extends CanvasTest {
 
 	}
 	
-//	@Test
-//	public void testAssignClass() {
-//			this.doTestAssignClassWithOneSubsystem();
-//			this.doTestCheckTableItemForAssignClass();
-//	}
-
 	public class Package_by_name_c implements ClassQueryInterface_c {
 		public boolean evaluate(Object candidate) {
 			Package_c selected = (Package_c) candidate;

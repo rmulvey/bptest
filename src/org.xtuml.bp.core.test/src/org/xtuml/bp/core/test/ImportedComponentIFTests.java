@@ -56,13 +56,6 @@ public class ImportedComponentIFTests extends BaseTest {
 		}
 	}
 
-	// Enforce ordering of the tests in this class
-//	@Test
-//	public void testImportedComponentIFTests() {
-//		dotestSingleComponentInScopeInterface();
-//		dotestMultipleComponentAtLeastOneInScopeIF();
-//		dotestRemovalOfImportedReferenceOnReFormalization();
-//	}
 	@Test
 	public void testSingleComponentInScopeInterface() {
 		Interface_c iface = getInterface(true);

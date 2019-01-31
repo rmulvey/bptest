@@ -1,14 +1,6 @@
 package org.xtuml.bp.ui.canvas.test;
-import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-//=====================================================================
-//
-//File:      InterfaceDrawingTests.java
-//
-//(c) Copyright 2004-2014 Mentor Graphics Corporation All rights reserved.
-//
-//=====================================================================
 import org.xtuml.bp.core.Package_c;
 import org.xtuml.bp.core.common.ClassQueryInterface_c;
 import org.xtuml.bp.test.common.OrderedRunner;

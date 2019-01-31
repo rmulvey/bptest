@@ -1,12 +1,3 @@
-
-//=====================================================================
-//
-//File:      $RCSfile: DescriptionEditorInteraction.java,v $
-//Version:   $Revision: 1.21 $
-//Modified:  $Date: 2013/05/10 06:03:21 $
-//
-//(c) Copyright 2004-2014 by Mentor Graphics Corp. All rights reserved.
-//
 //=====================================================================
 // Licensed under the Apache License, Version 2.0 (the "License"); you may not 
 // use this file except in compliance with the License.  You may obtain a copy 
@@ -67,35 +58,11 @@ public class DescriptionEditorInteraction extends UITextTest {
 	private static boolean firstSetup = true;
 	private static String testModelName = "testDescrip1";
 	
-//	public DescriptionEditorInteraction(String projectName, String name) throws CoreException {
-//		super(null, name);
-//	}
-//	
-//	public DescriptionEditorInteraction(String name) throws CoreException {
-//		super(null, name);
-//	}
-
 	private static String m_oldDescrip; 
 	private final static String m_updateText = "New Line \n";
 	private static long m_markerId[] = new long [4];
 	private static int numMarkers = 0;
 	
-//	// enforce order in which these tests are run
-//    public void testDescriptionEditorInteraction() {
-//    	dotestDirtyFlag();
-//    	dotestUndo();
-//    	dotestRevert();
-//    	dotestSave();
-//    	dotestOpenChangedDescription();
-//    	dotestAddBookmark();
-//    	dotestBookmarkHoverText();
-//    	dotestAddTaskMarker();
-//    	dotestMultipleMarkerHoverText();
-//    	dotestDeleteBookmark();
-//    	dotestTaskHoverText();
-//    	dotestDeleteTask();
-//    }
-    
 	@Before
 	public void setUp() throws Exception {
     	super.setUp();

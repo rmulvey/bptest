@@ -1,12 +1,4 @@
 //========================================================================
-//
-//File:      $RCSfile: AssignRemoveEventsGenerics.java,v $
-//Version:   $Revision: 1.5 $
-//Modified:  $Date: 2013/05/10 04:30:25 $
-//
-//(c) Copyright 2004-2014 by Mentor Graphics Corp. All rights reserved.
-//
-//========================================================================
 // Licensed under the Apache License, Version 2.0 (the "License"); you may not 
 // use this file except in compliance with the License.  You may obtain a copy 
 // of the License at
@@ -114,27 +106,6 @@ public class AssignRemoveEventsGenerics extends CanvasTest {
 		CanvasTestUtils.openCanvasEditor(ism);
 	}
 
-//	@Test
-//	public void testAssignRemoveEventGenerics(){
-//	      doTestContextMenuFilterNoEventAssigned();
-//	      doTestAssignEventToTransition(); 
-//	      doTestContextMenuFilterEventAssigned(); 
-//	      doTestRemoveEventFromTransition(); 
-//	      doTestIssue699Scenario(); 
-//	      doTestReplaceEventOnTransition(); 
-//	      doTestContextMenuFilterNoEvents(); 
-//	      doTestSelectNETOneEventOneTransition(); 
-//	      doTestSelectNETOneEventTwoTransitions(); 
-//	      doTestSelectNETTwoEventsTwoTransitions(); 
-//	      doTestSelectCTUnassignedOneEventOneTransitions(); 
-//	      doTestSelectCTAssignedOneEventOneTransitions(); 
-//	      doTestSelectCTUnassignedOneEventTwoTransitions(); 
-//	      doTestSelectCTAssignedTwoEventsTwoTransitions(); 
-//	      doTestSelectNETOneEventTwoTransitionsDiffDirections(); 
-//	      doTestSelectCTFourEventsFourTransitionsFourStates(); 
-//	      doTestSelectCTThreeEventsFourTransitionsFourStates(); 
-//	}
-	
 	@Test
 	public void testContextMenuFilterNoEventAssigned() {
 		CanvasTestUtils ctu = new CanvasTestUtils();

@@ -1,12 +1,4 @@
 //========================================================================
-//
-//File:      $RCSfile: GraphicalToolCreationTests.java,v $
-//Version:   $Revision: 1.5 $
-//Modified:  $Date: 2013/01/10 22:43:50 $
-//
-//Copyright 2005-2014 Mentor Graphics Corporation. All rights reserved.
-//
-//========================================================================
 // Licensed under the Apache License, Version 2.0 (the "License"); you may not 
 // use this file except in compliance with the License.  You may obtain a copy 
 // of the License at
@@ -31,9 +23,7 @@ import org.eclipse.swt.widgets.Event;
 import org.eclipse.swt.widgets.Shell;
 import org.eclipse.ui.PlatformUI;
 import org.junit.Before;
-import org.junit.Rule;
 import org.junit.Test;
-import org.junit.rules.TestName;
 import org.junit.runner.RunWith;
 import org.xtuml.bp.core.Association_c;
 import org.xtuml.bp.core.CorePlugin;

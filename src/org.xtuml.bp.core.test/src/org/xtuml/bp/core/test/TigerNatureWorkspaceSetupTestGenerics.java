@@ -123,14 +123,6 @@ public class TigerNatureWorkspaceSetupTestGenerics extends CanvasTest {
 		private String m_name;
 	}
 	
-	// Enforce ordering of the test functions
-//	@Test
-//	public void testWorkspaceSetup() throws CoreException {
-//		dotestSetupForInterfaceAssignment();
-//		dotestSetupForComponentAssignment();
-//		dotestSetupForDataTypeAssignment();
-//	}
-
 	@Test
 	public void testSetupForInterfaceAssignment() {
 		// create an interface in one package

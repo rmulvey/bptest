@@ -136,21 +136,6 @@ public class SetupCreationTests extends CanvasTest {
 		private String m_name;
 	}
 
-	/**
-	 * The tests below (ending with IPRs) need to be first otherwise
-	 * the expected results are not correct
-	 */
-	// Enforce ordering of the test functions
-//	@Test
-//	public void testSetupCreationTests() throws CoreException {
-//		dotestSetupInitialProjects();
-//		dotestCreatePackage();
-//		dotestCreatePackageInPackage();
-//		dotestCreateSequenceInPackage();
-//		dotestCreateUseCaseDiagramInSystem();
-//		dotestCreatePackageInPackageInPackage();
-//	}
-
 	@Test
 	public void testSetupInitialProjects() throws CoreException {
 		Ooaofooa.setPersistEnabled(true);

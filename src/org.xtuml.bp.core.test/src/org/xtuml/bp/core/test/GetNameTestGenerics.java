@@ -77,36 +77,6 @@ public class GetNameTestGenerics extends CoreTest {
 		}
 	}
 
-//	@Test
-//	public void testGetNameTestGenerics() throws Exception{
-//		 doTestActionGetName(); 
-//	       doTestClassAsAssociatedOneSideGetName(); 
-//	       doTestClassAsAssociatedOtherSideGetName(); 
-//	       doTestClassAsSimpleParticipantGetName(); 
-//	       doTestClassAsSupertypeGetName(); 
-//	       doTestClassAsDerivedOneSideGetName(); 
-//	       doTestClassAsDerivedOtherSideGetName(); 
-//	       doTestClassAsLinkGetName(); 
-//	       doTestClassAsSimpleFormalizerGetName(); 
-//	       doTestClassAsSubtypeGetName(); 
-//	       doTestClassIdentifierGetName(); 
-//	       doTestCoreDataTypeGetName(); 
-//	       doTestDerivedAssociationGetName(); 
-//	       doTestEventSupplementalDataGetNameLocalEmpty(); 
-//	       doTestEventSupplementalDataGetNameLocalOne(); 
-//	       doTestEventSupplementalDataGetNameLocalTwo(); 
-//	       doTestEventSupplementalDataGetNameNonLocalEmpty(); 
-//	       doTestEventSupplementalDataGetNameNonLocalOne(); 
-//	       doTestEventSupplementalDataGetNameNonLocalTwo(); 
-//	       doTestEventSupplementalDataGetNamePolyEmpty(); 
-//	       doTestEventSupplementalDataGetNamePolyOne(); 
-//	       doTestEventSupplementalDataGetNamePolyTwo(); 
-//	       doTestImportedClassGetName(); 
-//	       doTestNoEventTransitionGetName(); 
-//	       doTestNonLocalEventGetName(); 
-//	       doTestReferentialAttributeGetName(); 
-//	       doTestReferentialAttributeReferringToRefAttrGetName();
-//	}
 
 	@Test
 	public void testActionGetName() throws Exception {

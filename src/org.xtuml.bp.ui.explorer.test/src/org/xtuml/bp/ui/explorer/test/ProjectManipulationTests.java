@@ -46,9 +46,6 @@ import org.xtuml.bp.ui.graphics.editor.ModelEditor;
 @RunWith(OrderedRunner.class)
 	public class ProjectManipulationTests extends BaseTest
 {
-//    public ProjectManipulationTests(String name) {
-//        super(packageName, name);
-//    }
     public ProjectManipulationTests() {
         super(packageName, null);
     }
@@ -68,7 +65,6 @@ import org.xtuml.bp.ui.graphics.editor.ModelEditor;
         ExplorerUtil.showModelExplorer();
     }
     
-    //todo - this fails because there are other projects besides odms1 in the workspace.  We either need to remove them, or have this test be smarter about finding and inspecting that project only
     /* (non-Javadoc)
      * @see junit.framework.TestCase#setUp()
      */

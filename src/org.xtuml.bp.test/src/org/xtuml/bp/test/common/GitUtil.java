@@ -1,10 +1,4 @@
 //========================================================================
-//
-// File: GitUtil.java
-//
-// Copyright 2005-2014 Mentor Graphics Corporation. All rights reserved.
-//
-//========================================================================
 // Licensed under the Apache License, Version 2.0 (the "License"); you may not 
 // use this file except in compliance with the License.  You may obtain a copy 
 // of the License at
@@ -39,7 +33,6 @@ import org.eclipse.ui.PartInitException;
 import org.eclipse.ui.PlatformUI;
 import org.eclipse.ui.navigator.CommonNavigator;
 import org.xtuml.bp.core.CorePlugin;
-import org.xtuml.bp.core.util.UIUtil;
 import org.xtuml.bp.model.compare.contentmergeviewer.ModelContentMergeViewer;
 import org.xtuml.bp.test.TestUtil;
 

@@ -15,7 +15,6 @@
 package org.xtuml.bp.ui.canvas.test;
 
 import org.eclipse.swt.graphics.Point;
-import org.eclipse.ui.PlatformUI;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;

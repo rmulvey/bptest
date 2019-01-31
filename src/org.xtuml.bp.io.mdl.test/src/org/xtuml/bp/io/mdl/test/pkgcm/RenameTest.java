@@ -1,12 +1,4 @@
 //=====================================================================
-//
-//File:      $RCSfile: RenameTest.java,v $
-//Version:   $Revision: 1.11 $
-//Modified:  $Date: 2013/01/10 23:12:55 $
-//
-//(c) Copyright 2004-2014 by Mentor Graphics Corp. All rights reserved.
-//
-//=====================================================================
 // Licensed under the Apache License, Version 2.0 (the "License"); you may not 
 // use this file except in compliance with the License.  You may obtain a copy 
 // of the License at
@@ -168,14 +160,12 @@ public abstract class RenameTest extends PkgCMBaseTest {
     /**
      * 
      * @param compType
-     *            TODO
      * @param compName
      * @param focusedEditor
      * @param forceNotFocus
      *            some components has only one editor, this parameter will be
      *            used to put it in background by open some other editor
      * @param expectedEditorCount
-     *            TODO
      * @throws Exception
      * @throws CoreException
      */

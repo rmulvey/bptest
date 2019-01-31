@@ -1,14 +1,6 @@
 package org.xtuml.bp.ui.canvas.test;
 
 //=====================================================================
-//
-//File:      $RCSfile: ODMSTest.java,v $
-//Version:   $Revision: 1.23 $
-//Modified:  $Date: 2013/05/10 05:41:50 $
-//
-//(c) Copyright 2004-2014 Mentor Graphics Corporation All rights reserved.
-//
-//=====================================================================
 // Licensed under the Apache License, Version 2.0 (the "License"); you may not
 // use this file except in compliance with the License.  You may obtain a copy
 // of the License at
@@ -37,7 +29,6 @@ package org.xtuml.bp.ui.canvas.test;
 
 import org.eclipse.jface.preference.IPreferenceStore;
 import org.eclipse.jface.viewers.ISelection;
-import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.xtuml.bp.core.CorePlugin;

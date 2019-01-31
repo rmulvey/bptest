@@ -68,7 +68,6 @@ import org.xtuml.bp.core.common.PersistenceManager;
 import org.xtuml.bp.test.TestUtil;
 import org.xtuml.bp.utilities.ui.ProjectUtilities;
 
-import org.junit.Assert;
 import junit.framework.TestCase;
 
 public class TestingUtilities {

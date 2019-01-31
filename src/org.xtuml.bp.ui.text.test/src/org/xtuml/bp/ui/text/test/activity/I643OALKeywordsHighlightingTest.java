@@ -1,11 +1,3 @@
-// =====================================================================
-//
-//File: $RCSfile: I643OALKeywordsHighlightingTest.java,v $
-//Version: $Revision: 1.13 $
-//Modified: $Date: 2013/05/10 06:02:36 $
-//
-//(c) Copyright 2004-2014 by Mentor Graphics Corp. All rights reserved.
-//
 //=====================================================================
 // Licensed under the Apache License, Version 2.0 (the "License"); you may not 
 // use this file except in compliance with the License.  You may obtain a copy 
@@ -22,7 +14,6 @@
 
 package org.xtuml.bp.ui.text.test.activity;
 
-import org.eclipse.core.runtime.CoreException;
 import org.eclipse.jface.text.TextViewer;
 import org.eclipse.swt.custom.StyleRange;
 import org.eclipse.swt.widgets.Display;
@@ -43,21 +34,9 @@ public class I643OALKeywordsHighlightingTest extends BaseTest {
 
 
 	public I643OALKeywordsHighlightingTest(){
-//		super("HighlightingTest", null); 
 		super();
-		// TODO Auto-generated constructor stub
 	}
 	
-//	public I643OALKeywordsHighlightingTest(String name) throws CoreException {
-//		super("HighlightingTest", name); 
-//	}
-//
-//	public I643OALKeywordsHighlightingTest(String projectName, String name)
-//			throws CoreException {
-//		super(projectName, name);
-//
-//	}
-
 	private static boolean firstSetup = true;
 	private static final String testModelName = "testDescrip1";
 	

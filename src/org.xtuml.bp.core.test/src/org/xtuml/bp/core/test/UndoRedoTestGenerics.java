@@ -1,12 +1,4 @@
 //========================================================================
-//
-//File:      $RCSfile: UndoRedoTestGenerics.java,v $
-//Version:   $Revision: 1.5 $
-//Modified:  $Date: 2013/05/10 04:30:25 $
-//
-//(c) Copyright 2005-2014 by Mentor Graphics Corp. All rights reserved.
-//
-//========================================================================
 // Licensed under the Apache License, Version 2.0 (the "License"); you may not 
 // use this file except in compliance with the License.  You may obtain a copy 
 // of the License at
@@ -144,15 +136,6 @@ public class UndoRedoTestGenerics extends CanvasTest {
 
 	}
 	
-//	@Test
-//	public void testUnfoRedoTest() throws Exception{
-//		doTestUndoRedoOfDeletionOfMultipleModelElementTypes();
-//		doTestUndoRedoOfClassMovement();
-//		doTestClearingOfUndoRedoStacksOnFileChange();
-//		doTestRevertPersisted();
-//		doTestUndoDeletionOfSubSystem();
-//	}
-
 	/**
 	 * Deletes in one action a pair of classes connected by an association, 
 	 * as well as an association not connected to either class (to ensure

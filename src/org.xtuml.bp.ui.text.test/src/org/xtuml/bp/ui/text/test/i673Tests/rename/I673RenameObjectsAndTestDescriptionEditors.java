@@ -1,12 +1,4 @@
 //=====================================================================
-//
-//File:      $RCSfile: I673RenameObjectsAndTestDescriptionEditors.java,v $
-//Version:   $Revision: 1.14 $
-//Modified:  $Date: 2013/05/10 06:07:36 $
-//
-//(c) Copyright 2005-2014 by Mentor Graphics Corp. All rights reserved.
-//
-//=====================================================================
 // Licensed under the Apache License, Version 2.0 (the "License"); you may not 
 // use this file except in compliance with the License.  You may obtain a copy 
 // of the License at
@@ -79,9 +71,6 @@ public class I673RenameObjectsAndTestDescriptionEditors extends UITextTest {
  		super();
 	}
 	
-//	public I673RenameObjectsAndTestDescriptionEditors(String name) throws CoreException {
-//		super(null, name);
-//	}
   	private static boolean isFirstTime=true;
 	private static String testModelName = "testDescrip1";
 	

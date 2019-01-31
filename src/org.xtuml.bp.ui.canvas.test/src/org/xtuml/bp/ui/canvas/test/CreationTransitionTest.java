@@ -63,7 +63,6 @@ public class CreationTransitionTest extends CanvasTest {
 	
 
 	public void openTestSMDiagram(String title) {
-		CanvasTestUtils ctu = new CanvasTestUtils();
 		InstanceStateMachine_c uut = InstanceStateMachine_c.InstanceStateMachineInstance(modelRoot);
 		CanvasTestUtils.openCanvasEditor(uut);
 		BaseTest.dispatchEvents(0);

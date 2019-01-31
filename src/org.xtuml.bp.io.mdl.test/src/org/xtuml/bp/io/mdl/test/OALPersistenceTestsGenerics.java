@@ -1,12 +1,9 @@
 package org.xtuml.bp.io.mdl.test;
 
-import java.io.BufferedReader;
 import java.io.FileNotFoundException;
-import java.io.FileReader;
 
 import org.eclipse.core.resources.IncrementalProjectBuilder;
 import org.eclipse.core.runtime.CoreException;
-import org.eclipse.jface.dialogs.MessageDialogWithToggle;
 import org.eclipse.jface.preference.IPreferenceStore;
 import org.junit.After;
 import org.junit.Before;
@@ -85,14 +82,6 @@ public class OALPersistenceTestsGenerics extends BaseTest {
 		super.tearDown();
 	}
 
-//	// As of Java7 and JUnit 4, the ordering of test functions is not guaranteed to be the order
-//	// in the file.  Thus, we add this public test to enforce ordering
-//	@Test
-//	public void testOALPersistence() throws FileNotFoundException, CoreException {
-//		dotestPersistOAL();
-//		dotestOALInstancesCreatedWhileBuild();
-//		dotestOALInstancesExportedProperly();
-//	}
 	@Test
 	public void testPersistOAL() throws FileNotFoundException, CoreException {
 		try {

@@ -44,14 +44,6 @@ public class ModelChangeListenersBatchingTestGenerics extends CoreTest {
 	TestModelChangeListener instantListener = new TestModelChangeListener(false);
 	TestModelChangeListener batchedListener = new TestModelChangeListener(true);
 
-//	@Test
-//	public void testModelCHange() throws Exception{
-//		doTestCreateModelElement();
-//		doTestDeleteModelElement();
-//		doTestRenameSQ_CP();
-//		doTestRenameO_ATTR();
-//	}
-
 	@Test
 	public void testCreateModelElement() throws Exception {
 		ActionTestGenerics test = new ActionTestGenerics();

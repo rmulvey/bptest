@@ -467,8 +467,6 @@ public class GenericEditorUtil {
     public static int getEditorType(IEditorPart editor)
     {
         if (editor instanceof GraphicalEditor){
-            
-            // TODO how to get ME represented by given editor
             return EDITOR_TYPE_CANVAS;
         }
             else if (editor instanceof DescriptionEditor)

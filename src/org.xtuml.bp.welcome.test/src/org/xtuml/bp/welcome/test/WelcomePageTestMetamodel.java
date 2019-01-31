@@ -1,13 +1,5 @@
 package org.xtuml.bp.welcome.test;
 //=====================================================================
-//
-//File:      $RCSfile: WelcomePageTestMetamodel.java,v $
-//Version:   $Revision: 1.6 $
-//Modified:  $Date: 2013/01/10 23:05:14 $
-//
-//(c) Copyright 2004-2014 by Mentor Graphics Corp. All rights reserved.
-//
-//=====================================================================
 // Licensed under the Apache License, Version 2.0 (the "License"); you may not 
 // use this file except in compliance with the License.  You may obtain a copy 
 // of the License at
@@ -30,10 +22,6 @@ import org.eclipse.core.resources.ResourcesPlugin;
 import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.NullProgressMonitor;
 import org.eclipse.swt.widgets.Shell;
-import org.eclipse.swt.widgets.TreeItem;
-import org.eclipse.ui.IViewPart;
-import org.eclipse.ui.IWorkbenchPage;
-import org.eclipse.ui.PartInitException;
 import org.eclipse.ui.PlatformUI;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -43,8 +31,6 @@ import org.xtuml.bp.core.common.PersistenceManager;
 import org.xtuml.bp.test.TestUtil;
 import org.xtuml.bp.test.common.OrderedRunner;
 import org.xtuml.bp.test.common.TestingUtilities;
-import org.xtuml.bp.ui.explorer.ExplorerView;
-import org.xtuml.bp.utilities.ui.TreeUtilities;
 import org.xtuml.bp.welcome.gettingstarted.SampleProjectGettingStartedAction;
 
 import junit.framework.TestCase;
@@ -52,7 +38,7 @@ import junit.framework.TestCase;
 public class WelcomePageTestMetamodel extends TestCase {
 
 	private static IProject project;
-    private static IViewPart g_view = null;
+    //private static IViewPart g_view = null;
     
 	// This test is setup so we can swap-in a different test model
 	// if we choose to do so.  All we should need to do is change the 
@@ -240,6 +226,7 @@ public class WelcomePageTestMetamodel extends TestCase {
 		return project;
 	}
 
+	/*
 	private IViewPart selectView(final IProject project, final String viewName) {
 		g_view = null;
 		Runnable r = new Runnable() {
@@ -257,6 +244,6 @@ public class WelcomePageTestMetamodel extends TestCase {
 		r.run();
 		assertTrue("Unable to select view: " + viewName, g_view != null);
 		return g_view;
-	}
+	}*/
 
 }

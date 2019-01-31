@@ -36,3 +36,4 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.gef
 Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Automatic-Module-Name: org.xtuml.bp.ui.text.test

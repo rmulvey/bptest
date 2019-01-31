@@ -1,12 +1,4 @@
 //========================================================================
-//
-//File:      $RCSfile: TestConstant_Generics.java,v $
-//Version:   $Revision: 1.4 $
-//Modified:  $Date: 2013/05/10 04:52:49 $
-//
-//(c) Copyright 2006-2014 by Mentor Graphics Corp. All rights reserved.
-//
-//========================================================================
 // Licensed under the Apache License, Version 2.0 (the "License"); you may not 
 // use this file except in compliance with the License.  You may obtain a copy 
 // of the License at
@@ -317,7 +309,6 @@ AboveSiblingProtectedTestConst_public
 		try {
 			parser.action(function.getSync_id(), Oalconstants_c.FUNCTION_TYPE);
 		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
  		return parser.m_output;

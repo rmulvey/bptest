@@ -1,12 +1,4 @@
 //=====================================================================
-//
-//File:      $RCSfile: RenameInvolvingResourceTestGenerics.java,v $
-//Version:   $Revision: 1.5 $
-//Modified:  $Date: 2013/05/10 04:30:26 $
-//
-//(c) Copyright 2004-2014 by Mentor Graphics Corp. All rights reserved.
-//
-//=====================================================================
 // Licensed under the Apache License, Version 2.0 (the "License"); you may not 
 // use this file except in compliance with the License.  You may obtain a copy 
 // of the License at
@@ -31,7 +23,6 @@ import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.NullProgressMonitor;
 import org.eclipse.core.runtime.Path;
 import org.eclipse.swt.widgets.Display;
-import org.eclipse.ui.PlatformUI;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -84,13 +75,6 @@ public class RenameInvolvingResourceTestGenerics extends CoreTest {
 
 	}
 	
-//	@Test
-//	public void testRenameInvokving() throws Exception{
-//		doTestDomainRenameCausesModelFileNameChange();
-//		doTestSystemRenameCausesProjectNameChange();
-//		doTestProjectRenameCausesSystemNameChange();
-//	}
-
 	@Test
 	public void testDomainRenameCausesModelFileNameChange() throws Exception {
 		// setup the test project and model

@@ -18,6 +18,7 @@ import org.xtuml.bp.core.InstanceStateMachine_c;
 import org.xtuml.bp.core.Ooaofooa;
 import org.xtuml.bp.core.test.TransitionActionTestGenerics;
 import org.xtuml.bp.core.util.WorkspaceUtil;
+import org.xtuml.bp.test.TestUtil;
 import org.xtuml.bp.test.common.BaseTest;
 import org.xtuml.bp.test.common.OrderedRunner;
 import org.xtuml.bp.test.common.TestingUtilities;
@@ -88,7 +89,8 @@ public class TransitionActionPersistenceTests extends CanvasTest {
                                                          actualPath.toString());
         }
         else {
-        	// TODO copy actual file above to expected.
+        	TestUtil.copyFile(actualPath.toFile(), TestingUtilities.getExpectedResultsPath() +
+                    "testTransitionActionPersistence/");
         }
         TransitionActionTestGenerics.handleTearDown();
     }
@@ -122,7 +124,8 @@ public class TransitionActionPersistenceTests extends CanvasTest {
                                                          actualPath.toString());
         }
         else {
-        	// TODO copy actual file above to expected.
+        	TestUtil.copyFile(actualPath.toFile(), TestingUtilities.getExpectedResultsPath() +
+                    "testTransitionActionPersistence/");
         }
         TransitionActionTestGenerics.handleTearDown();
     }

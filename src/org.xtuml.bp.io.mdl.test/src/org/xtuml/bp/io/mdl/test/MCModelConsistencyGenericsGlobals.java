@@ -1,10 +1,8 @@
 package org.xtuml.bp.io.mdl.test;
 
 import java.io.File;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
-import java.util.Vector;
 
 import org.junit.After;
 import org.junit.Before;
@@ -19,10 +17,8 @@ import org.xtuml.bp.core.Ooaofooa;
 import org.xtuml.bp.core.SystemModel_c;
 import org.xtuml.bp.core.common.ClassQueryInterface_c;
 import org.xtuml.bp.test.common.BaseTest;
-import org.xtuml.bp.test.common.OrderedRunner;
 import org.xtuml.bp.ui.canvas.test.ModelRecreationTests;
 
-//@RunWith(OrderedRunner.class)
 @RunWith(Parameterized.class)
 public class MCModelConsistencyGenericsGlobals extends BaseTest
 {

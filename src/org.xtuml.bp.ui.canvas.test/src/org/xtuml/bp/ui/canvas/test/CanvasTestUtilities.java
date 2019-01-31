@@ -170,9 +170,6 @@ public static GraphicalEditor openClassDiagramEditor(Ooaofooa modelRoot) {
 private static GraphicalEditor getClassDiagramEditor() {
 	return getCanvasEditor("Odms");
 }
-private static GraphicalEditor getDomainCanvasEditor() {
-	return getCanvasEditor("odms");
-}
 
 public static void updateTreeItem(Object t1, String newValue ) throws Exception
 {

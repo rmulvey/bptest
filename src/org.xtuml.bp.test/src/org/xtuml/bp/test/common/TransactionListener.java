@@ -1,12 +1,4 @@
 //========================================================================
-//
-//File:      $RCSfile: TransactionListener.java,v $
-//Version:   $Revision: 1.9 $
-//Modified:  $Date: 2013/01/10 23:21:32 $
-//
-//(c) Copyright 2005-2014 by Mentor Graphics Corp. All rights reserved.
-//
-//========================================================================
 // Licensed under the Apache License, Version 2.0 (the "License"); you may not 
 // use this file except in compliance with the License.  You may obtain a copy 
 // of the License at
@@ -25,14 +17,12 @@ import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.Comparator;
 
-import org.eclipse.core.runtime.Platform;
 import org.xtuml.bp.core.Modeleventnotification_c;
 import org.xtuml.bp.core.Ooaofooa;
 import org.xtuml.bp.core.common.AttributeChangeModelDelta;
 import org.xtuml.bp.core.common.IModelDelta;
 import org.xtuml.bp.core.common.ITransactionListener;
 import org.xtuml.bp.core.common.ModelRoot;
-import org.xtuml.bp.core.common.NonRootModelElement;
 import org.xtuml.bp.core.common.RelationshipChangeModelDelta;
 import org.xtuml.bp.core.common.Transaction;
 

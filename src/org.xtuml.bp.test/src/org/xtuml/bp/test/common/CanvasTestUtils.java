@@ -1,12 +1,4 @@
 //=====================================================================
-//
-//File:      $RCSfile: CanvasTestUtils.java,v $
-//Version:   $Revision: 1.17 $
-//Modified:  $Date: 2013/05/10 05:37:52 $
-//
-//(c) Copyright 2004-2014 by Mentor Graphics Corp. All rights reserved.
-//
-//=====================================================================
 // Licensed under the Apache License, Version 2.0 (the "License"); you may not 
 // use this file except in compliance with the License.  You may obtain a copy 
 // of the License at
@@ -23,15 +15,12 @@ package org.xtuml.bp.test.common;
 
 import java.util.UUID;
 
-import junit.framework.TestCase;
-
 import org.eclipse.core.resources.IWorkspaceRunnable;
 import org.eclipse.core.resources.ResourcesPlugin;
 import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.draw2d.FigureCanvas;
 import org.eclipse.draw2d.geometry.Dimension;
-import org.eclipse.draw2d.geometry.Rectangle;
 import org.eclipse.draw2d.geometry.Translatable;
 import org.eclipse.gef.GraphicalViewer;
 import org.eclipse.gef.editparts.AbstractGraphicalEditPart;
@@ -50,7 +39,6 @@ import org.eclipse.ui.IEditorReference;
 import org.eclipse.ui.IWorkbenchPage;
 import org.eclipse.ui.IWorkbenchWindow;
 import org.eclipse.ui.PlatformUI;
-
 import org.xtuml.bp.core.Association_c;
 import org.xtuml.bp.core.ClassAsSubtype_c;
 import org.xtuml.bp.core.CorePlugin;
@@ -85,6 +73,8 @@ import org.xtuml.bp.ui.graphics.actions.OpenGraphicsEditor;
 import org.xtuml.bp.ui.graphics.editor.GraphicalEditor;
 import org.xtuml.bp.ui.graphics.editor.ModelEditor;
 import org.xtuml.bp.ui.text.activity.ShowActivityAction;
+
+import junit.framework.TestCase;
 
 public class CanvasTestUtils {
 

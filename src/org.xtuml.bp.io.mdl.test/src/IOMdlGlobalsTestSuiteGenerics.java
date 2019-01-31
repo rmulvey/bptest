@@ -1,10 +1,4 @@
 //=====================================================================
-//
-//File:      IOMdlGlobalsTestSuiteGenerics.java
-//
-//(c) Copyright 2004-2014 by Mentor Graphics Corp. All rights reserved.
-//
-//=====================================================================
 // Licensed under the Apache License, Version 2.0 (the "License"); you may not 
 // use this file except in compliance with the License.  You may obtain a copy 
 // of the License at
@@ -21,8 +15,6 @@
 
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
-import org.xtuml.bp.core.CorePlugin;
-import org.xtuml.bp.core.common.BridgePointPreferencesStore;
 import org.xtuml.bp.core.test.GlobalTestSetupClass;
 import org.xtuml.bp.io.mdl.test.IOMdlGlobalsTestGenerics;
 import org.xtuml.bp.io.mdl.test.IOMdlPublishReferencesTest;
@@ -33,7 +25,6 @@ import org.xtuml.bp.io.mdl.test.ImportReferencedIPRModelTest;
 import org.xtuml.bp.io.mdl.test.ProxyTestsGenerics;
 import org.xtuml.bp.io.mdl.test.StaleProxyExportTestGenerics;
 
-import junit.framework.Test;
 import junit.framework.TestSuite;
 @RunWith(Suite.class)
 @Suite.SuiteClasses({

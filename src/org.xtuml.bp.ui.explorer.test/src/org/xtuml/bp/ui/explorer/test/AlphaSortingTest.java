@@ -1,12 +1,4 @@
 //=====================================================================
-//
-//File:      $RCSfile$
-//Version:   $Revision$
-//Modified:  $Date$
-//
-//(c) Copyright 2004-2014 by Mentor Graphics Corp. All rights reserved.
-//
-//=====================================================================
 // Licensed under the Apache License, Version 2.0 (the "License"); you may not 
 // use this file except in compliance with the License.  You may obtain a copy 
 // of the License at
@@ -52,9 +44,6 @@ import org.xtuml.bp.test.common.TestingUtilities;
      */
     private static final String logPath = System.getProperty("LOGFILE_PATH");
 
-//    public AlphaSortingTest(String name) {
-//    	super("org.xtuml.bp.ui.explorer.test", name);
-//    }
     public AlphaSortingTest() {
     	super("org.xtuml.bp.ui.explorer.test", null);
     }
@@ -86,12 +75,6 @@ import org.xtuml.bp.test.common.TestingUtilities;
         }
     }
 
-    // enforces ordering of the tests in this class
-//    @Test
-//	public void testAlphaSorting() throws CoreException,IOException {
-//    	dotestAlphaSortingOfSystems();
-//    }
-//    
     /**
      * Tests that alpha sorting works properly for the root node
      */

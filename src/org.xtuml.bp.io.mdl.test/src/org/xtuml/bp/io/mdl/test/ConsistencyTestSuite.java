@@ -1,13 +1,5 @@
 package org.xtuml.bp.io.mdl.test;
 //=====================================================================
-//
-//File:      $RCSfile: ConsistencyTestSuite.java,v $
-//Version:   $Revision: 1.2 $
-//Modified:  $Date: 2013/05/10 05:13:52 $
-//
-//(c) Copyright 2005-2014 by Mentor Graphics Corp. All rights reserved.
-//
-//=====================================================================
 // Licensed under the Apache License, Version 2.0 (the "License"); you may not 
 // use this file except in compliance with the License.  You may obtain a copy 
 // of the License at
@@ -20,10 +12,6 @@ package org.xtuml.bp.io.mdl.test;
 // License for the specific language governing permissions and limitations under
 // the License.
 //=====================================================================
-
-import java.io.File;
-
-import org.xtuml.bp.ui.canvas.test.ModelRecreationTests;
 
 import junit.framework.Test;
 import junit.framework.TestSuite;

@@ -1,12 +1,4 @@
 //=====================================================================
-//
-//File:      $RCSfile: I673RenameObjectsAndTestActivityEditors.java,v $
-//Version:   $Revision: 1.10 $
-//Modified:  $Date: 2013/01/10 22:46:33 $
-//
-//(c) Copyright 2005-2014 by Mentor Graphics Corp. All rights reserved.
-//
-//=====================================================================
 // Licensed under the Apache License, Version 2.0 (the "License"); you may not 
 // use this file except in compliance with the License.  You may obtain a copy 
 // of the License at
@@ -43,18 +35,7 @@ import org.xtuml.bp.ui.text.test.activity.ActivityEditorInteraction;
 @RunWith(OrderedRunner.class)
 public class I673RenameObjectsAndTestActivityEditors extends UITextTest {
 	
-//	public I673RenameObjectsAndTestActivityEditors(String projectName, String name) throws CoreException {
-//		super("test", name); //$NON-NLS-1$
-//	}
-//	
-//	public I673RenameObjectsAndTestActivityEditors(String name) throws CoreException {
-//		super("test", name); //$NON-NLS-1$
-//	}
-
 	public I673RenameObjectsAndTestActivityEditors() throws CoreException {
-//		super("test", null); //$NON-NLS-1$
-//		super();
-		// TODO Auto-generated constructor stub
 	}
 
 	IEditorPart renameObjectAndCheckActivityEditor(String editorTitlePreFix, Object obj){
