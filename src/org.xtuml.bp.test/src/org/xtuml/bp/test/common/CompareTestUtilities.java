@@ -42,6 +42,7 @@ import org.eclipse.core.runtime.NullProgressMonitor;
 import org.eclipse.jface.viewers.StructuredSelection;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Control;
+import org.eclipse.swt.widgets.Menu;
 import org.eclipse.swt.widgets.Tree;
 import org.eclipse.swt.widgets.TreeItem;
 import org.eclipse.team.internal.ui.actions.CompareAction;
@@ -523,7 +524,7 @@ public class CompareTestUtilities {
 		ModelContentMergeViewer viewer = ModelContentMergeViewer
 				.getInstance(null);
 		TreeDifferencer differencer = viewer.getDifferencer();
-		List<TreeDifference> leftDifferences = differencer.getLeftDifferences();
+		List<TreeDifference> leftDifferences = differencer.getLeftDifferences(true);
 		List<TreeDifference> differencesToCopy = new ArrayList<TreeDifference>();
 		for (TreeDifference difference : leftDifferences) {
 			if ((difference.getKind() & Differencer.DIRECTION_MASK) == Differencer.CONFLICTING) {
@@ -600,7 +601,7 @@ public class CompareTestUtilities {
 		List<TreeDifference> differences = new ArrayList<TreeDifference>();
 		if (viewer != null) {
 			TreeDifferencer differencer = viewer.getDifferencer();
-			List<TreeDifference> leftDifferences = differencer.getLeftDifferences();
+			List<TreeDifference> leftDifferences = differencer.getLeftDifferences(true);
 			for (TreeDifference difference : leftDifferences) {
 				if (useDirectionMask) {
 					if ((difference.getKind() & Differencer.DIRECTION_MASK) == type) {
@@ -623,7 +624,7 @@ public class CompareTestUtilities {
 		ModelContentMergeViewer viewer = ModelContentMergeViewer
 				.getInstance(null);
 		TreeDifferencer differencer = viewer.getDifferencer();
-		List<TreeDifference> rightDifferences = differencer.getLeftDifferences();
+		List<TreeDifference> rightDifferences = differencer.getLeftDifferences(true);
 		List<TreeDifference> differences = new ArrayList<TreeDifference>();
 		for (TreeDifference difference : rightDifferences) {
 			if (useDirectionMask) {
@@ -641,15 +642,14 @@ public class CompareTestUtilities {
 		return getChangesFromLeft(Differencer.ADDITION, true);
 	}
 
-	public static void selectElementInTree(boolean left, NonRootModelElement element) {
-		ModelContentMergeViewer viewer = ModelContentMergeViewer
-				.getInstance(null);
-		SynchronizedTreeViewer tree = viewer.getLeftViewer();
-		if (!left) {
-			tree = viewer.getRightViewer();
+	public static void selectElementInTree(boolean left, Object element) {
+		SynchronizedTreeViewer tree = getTreeViewer(left);
+		if(element instanceof TreeItem) {
+			tree.setSelection(new StructuredSelection(((TreeItem) element).getData()));
+		} else {
+			tree.setSelection(new StructuredSelection(ComparableProvider
+					.getComparableTreeObject(element)));
 		}
-		tree.setSelection(new StructuredSelection(ComparableProvider
-				.getComparableTreeObject(element)));
 		BaseTest.dispatchEvents();
 	}
 
@@ -719,5 +719,19 @@ public class CompareTestUtilities {
 		// Note: Now you can use showCompareEditorView() to see the result
 	}
 
+	public static Menu getMenu(boolean left) {
+		SynchronizedTreeViewer treeViewer = getTreeViewer(left);
+		return treeViewer.getTree().getMenu();
+	}
+	
+	public static SynchronizedTreeViewer getTreeViewer(boolean left) {
+		ModelContentMergeViewer viewer = ModelContentMergeViewer
+				.getInstance(null);
+		return left ? viewer.getLeftViewer() : viewer.getRightViewer();
+	}
+
+	public static void doubleClickElementInTree(TreeItem item) {
+		UITestingUtilities.doubleClickTreeItem(item);
+	}
 	
 }

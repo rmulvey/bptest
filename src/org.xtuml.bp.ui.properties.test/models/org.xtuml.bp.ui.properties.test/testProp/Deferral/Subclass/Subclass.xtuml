@@ -1,0 +1,100 @@
+-- BP 7.1.6 content: ModelClass syschar: 3 persistence-version: 7.1.6
+
+INSERT INTO O_OBJ
+	VALUES ("9b64d3cc-e6c9-47d6-9702-7425e995fd56",
+	'Subclass',
+	2,
+	'Subclass',
+	'',
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO O_TFR
+	VALUES ("2076bd24-4193-4f62-b8f4-2907040fd84b",
+	"9b64d3cc-e6c9-47d6-9702-7425e995fd56",
+	'deferral',
+	'',
+	"ba5eda7a-def5-0000-0000-000000000000",
+	1,
+	'',
+	3,
+	'',
+	"00000000-0000-0000-0000-000000000000",
+	0);
+INSERT INTO O_REF
+	VALUES ("9b64d3cc-e6c9-47d6-9702-7425e995fd56",
+	"4a62ccbe-18ec-4006-8631-1c319e13244c",
+	0,
+	"0ca236b2-c50d-455f-8f82-8d15f21dc47f",
+	"e92ee78e-3650-4f5b-9928-a0fac2139802",
+	"55c1a8c0-ed2e-447a-b4e5-82f3bc61be08",
+	"61e3b0c6-79e5-4ae5-8d27-0a8a9dbf3d74",
+	"7c73193e-ce59-4c22-aaeb-36c7aa09304a",
+	"8a9682f8-b9d1-4673-885d-bbf3ddd2a7c8",
+	"00000000-0000-0000-0000-000000000000",
+	0,
+	'',
+	'Superclass',
+	'Id',
+	'R1');
+INSERT INTO R_RGO_PROXY
+	VALUES ("9b64d3cc-e6c9-47d6-9702-7425e995fd56",
+	"e92ee78e-3650-4f5b-9928-a0fac2139802",
+	"55c1a8c0-ed2e-447a-b4e5-82f3bc61be08",
+	'../Deferral.xtuml');
+INSERT INTO O_RTIDA_PROXY
+	VALUES ("0ca236b2-c50d-455f-8f82-8d15f21dc47f",
+	"4a62ccbe-18ec-4006-8631-1c319e13244c",
+	0,
+	"e92ee78e-3650-4f5b-9928-a0fac2139802",
+	"61e3b0c6-79e5-4ae5-8d27-0a8a9dbf3d74",
+	'../Deferral.xtuml');
+INSERT INTO O_RATTR
+	VALUES ("7c73193e-ce59-4c22-aaeb-36c7aa09304a",
+	"9b64d3cc-e6c9-47d6-9702-7425e995fd56",
+	"0ca236b2-c50d-455f-8f82-8d15f21dc47f",
+	"4a62ccbe-18ec-4006-8631-1c319e13244c",
+	1,
+	'Id');
+INSERT INTO O_BATTR_PROXY
+	VALUES ("0ca236b2-c50d-455f-8f82-8d15f21dc47f",
+	"4a62ccbe-18ec-4006-8631-1c319e13244c",
+	'../Superclass/Superclass.xtuml');
+INSERT INTO O_ATTR
+	VALUES ("7c73193e-ce59-4c22-aaeb-36c7aa09304a",
+	"9b64d3cc-e6c9-47d6-9702-7425e995fd56",
+	"00000000-0000-0000-0000-000000000000",
+	'Id',
+	'',
+	'',
+	'Id',
+	0,
+	"ba5eda7a-def5-0000-0000-000000000002",
+	'',
+	'');
+INSERT INTO O_ID
+	VALUES (0,
+	"9b64d3cc-e6c9-47d6-9702-7425e995fd56");
+INSERT INTO O_OIDA
+	VALUES ("7c73193e-ce59-4c22-aaeb-36c7aa09304a",
+	"9b64d3cc-e6c9-47d6-9702-7425e995fd56",
+	0,
+	'Id');
+INSERT INTO O_ID
+	VALUES (1,
+	"9b64d3cc-e6c9-47d6-9702-7425e995fd56");
+INSERT INTO O_ID
+	VALUES (2,
+	"9b64d3cc-e6c9-47d6-9702-7425e995fd56");
+INSERT INTO PE_PE
+	VALUES ("9b64d3cc-e6c9-47d6-9702-7425e995fd56",
+	1,
+	"1792edd3-7131-448f-ac40-8dd28017eb27",
+	"00000000-0000-0000-0000-000000000000",
+	4);
+INSERT INTO EP_PKG_PROXY
+	VALUES ("1792edd3-7131-448f-ac40-8dd28017eb27",
+	"00000000-0000-0000-0000-000000000000",
+	"2a8f0b42-d0f7-4ec9-ac6f-3571c4caeba3",
+	'Deferral',
+	'',
+	0,
+	'../Deferral.xtuml');

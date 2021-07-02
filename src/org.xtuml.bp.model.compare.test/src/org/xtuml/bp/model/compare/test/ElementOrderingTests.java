@@ -1162,7 +1162,7 @@ public class ElementOrderingTests extends BaseTest {
 			TreeDifferencer differencer = CompareTestUtilities
 					.compareElementWithLocalHistory(file, copy);
 			assertTrue("A difference was not created to allow testing of position change",
-					!differencer.getLeftDifferences().isEmpty());
+					!differencer.getLeftDifferences(true).isEmpty());
 			ModelContentMergeViewer viewer = ModelContentMergeViewer.getInstance(null);
 			viewer.setCopySelection(false);
 			viewer.copy(false);
@@ -1171,7 +1171,7 @@ public class ElementOrderingTests extends BaseTest {
 			BaseTest.dispatchEvents(0);
 			differencer.refresh();
 			assertTrue("Differences remained after copying positional change",
-					differencer.getLeftDifferences().isEmpty());		
+					differencer.getLeftDifferences(true).isEmpty());		
 			PlatformUI.getWorkbench().getActiveWorkbenchWindow().getActivePage()
 					.closeAllEditors(true);
 			// compare the files, they should be identical
@@ -1189,7 +1189,7 @@ public class ElementOrderingTests extends BaseTest {
 							// no work, just letting background processing finish.							
 						}
 					} catch (Throwable t) {
-						copy.setReadOnly(false);
+						copy.getResourceAttributes().setReadOnly(false);
 						retry--;
 					}
 				}

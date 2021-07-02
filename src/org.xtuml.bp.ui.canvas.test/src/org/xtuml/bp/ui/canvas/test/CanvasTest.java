@@ -578,9 +578,9 @@ public void createExpectedResults(boolean zoomGroup, boolean zoomSelected, boole
 		}
     }
 
-	protected static UUID getSameAsBaseAttributeUUID(ModelRoot modelRoot) {
+	protected static UUID getSameAsBaseAttributeUUID() {
 		DataType_c[] dataTypes = DataType_c.DataTypeInstances(
-			modelRoot,
+			Ooaofooa.getDefaultInstance(),
 			new ClassQueryInterface_c() {
 				public boolean evaluate(Object candidate) {
 					return (((DataType_c) candidate).getName()

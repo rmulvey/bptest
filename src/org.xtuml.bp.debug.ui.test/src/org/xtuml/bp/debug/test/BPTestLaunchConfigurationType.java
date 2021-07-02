@@ -4,6 +4,7 @@ import java.util.Set;
 
 import org.eclipse.core.resources.IContainer;
 import org.eclipse.core.runtime.CoreException;
+import org.eclipse.debug.core.ILaunchConfiguration;
 import org.eclipse.debug.core.ILaunchConfigurationType;
 import org.eclipse.debug.core.ILaunchConfigurationWorkingCopy;
 import org.eclipse.debug.core.ILaunchDelegate;
@@ -117,5 +118,35 @@ public class BPTestLaunchConfigurationType implements ILaunchConfigurationType {
     public boolean supportsModeCombination(Set modes) {
         return false;
     }
+
+	@Override
+	public ILaunchConfiguration[] getPrototypes() throws CoreException {
+		// fulfilling contract requirements
+		return null;
+	}
+
+	@Override
+	public ILaunchConfigurationWorkingCopy newPrototypeInstance(IContainer arg0, String arg1) throws CoreException {
+		// fulfilling contract requirements
+		return null;
+	}
+
+	@Override
+	public boolean supportsCommandLine() {
+		// fulfilling contract requirements
+		return false;
+	}
+
+	@Override
+	public boolean supportsOutputMerging() {
+		// fulfilling contract requirements
+		return false;
+	}
+
+	@Override
+	public boolean supportsPrototypes() {
+		// fulfilling contract requirements
+		return false;
+	}
 
 }

@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: BridgePoint Test Plug-in
 Bundle-SymbolicName: org.xtuml.bp.test; singleton:=true
-Bundle-Version: 6.18.0.qualifier
+Bundle-Version: 7.1.0.qualifier
 Bundle-ClassPath: test.jar
 Bundle-Activator: org.xtuml.bp.test.TestPlugin
 Bundle-Vendor: xtUML.org
@@ -47,6 +47,6 @@ Require-Bundle: org.eclipse.compare,
  org.eclipse.egit.ui;bundle-version="4.1.1",
  org.eclipse.jgit;bundle-version="4.1.1"
 Bundle-ActivationPolicy: lazy
-Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-RequiredExecutionEnvironment: JavaSE-11
 Eclipse-BundleShape: dir
 Automatic-Module-Name: org.xtuml.bp.test

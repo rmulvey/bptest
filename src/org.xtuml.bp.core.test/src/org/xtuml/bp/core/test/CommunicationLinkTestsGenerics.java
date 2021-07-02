@@ -23,6 +23,7 @@ import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Combo;
 import org.eclipse.ui.IWorkbench;
 import org.eclipse.ui.PlatformUI;
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -34,6 +35,7 @@ import org.xtuml.bp.core.ui.LinkFormalizeOnCOMM_LNKWizardPage2;
 import org.xtuml.bp.core.ui.Selection;
 import org.xtuml.bp.core.ui.ToggleEndVisibilityOnCOMM_LNKAction;
 import org.xtuml.bp.core.ui.ToggleStartVisibilityOnCOMM_LNKAction;
+import org.xtuml.bp.test.common.BaseTest;
 import org.xtuml.bp.test.common.OrderedRunner;
 import org.xtuml.bp.ui.canvas.test.CanvasTest;
 import org.xtuml.bp.ui.canvas.test.CanvasTestUtilities;
@@ -81,6 +83,13 @@ public class CommunicationLinkTestsGenerics extends CanvasTest {
 			initialized = true;
 			workbench = PlatformUI.getWorkbench();
 		}
+		BaseTest.logFileCheckingEnabled = false;
+	}
+	
+	@After
+	public void tearDown() throws Exception {
+		super.tearDown();
+		logFileCheckingEnabled = true;
 	}
 	
 	/**

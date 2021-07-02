@@ -22,17 +22,20 @@
 
 package org.xtuml.bp.core.test;
 
-import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.xtuml.bp.core.Attribute_c;
 import org.xtuml.bp.core.Bridge_c;
+import org.xtuml.bp.core.Component_c;
+import org.xtuml.bp.core.Deployment_c;
+import org.xtuml.bp.core.ExternalEntity_c;
+import org.xtuml.bp.core.ModelClass_c;
 import org.xtuml.bp.core.OperationParameter_c;
+import org.xtuml.bp.core.Os_c;
 import org.xtuml.bp.core.common.ModelElement;
 import org.xtuml.bp.core.ui.RenameAction;
 import org.xtuml.bp.test.TestUtil;
-import org.xtuml.bp.test.common.BaseTest;
 import org.xtuml.bp.test.common.OrderedRunner;
 
 /**
@@ -120,5 +123,111 @@ public class RenameTest2Generics extends CoreTest {
 		RenameAction.getRenameQuery(element, newName, oldName, true).run();
 		assertEquals("Adding space to element name succeeded.", oldName,
 				nameProvider.getName());
+	}
+
+	/**
+	 * Tests that the renaming of a model element updates a defaulted key 
+	 * letter field.
+	 */
+	@Test
+	public void testRenameUpdatesDefaultKeyLetter() {
+		// try to rename a deployment with a defaulted key letter
+		final Deployment_c deployment = Deployment_c.DeploymentInstance(modelRoot);
+		deployment.setKey_lett(Os_c.Remove_spaces(deployment.getName()));
+		checkDefaultedKeyLetterRenamed(deployment, new NameProvider() {
+			public String getName() {
+				return deployment.getName();
+			}
+		}, new KeyLetterProvider() {
+			public String getKey_lett() {
+				return deployment.getKey_lett();
+			}
+		});
+
+		// try to rename a external entity with a defaulted key letter
+		final ExternalEntity_c ee = ExternalEntity_c.ExternalEntityInstance(modelRoot);
+		ee.setKey_lett(Os_c.Remove_spaces(ee.getName()));
+		checkDefaultedKeyLetterRenamed(ee, new NameProvider() {
+			public String getName() {
+				return ee.getName();
+			}
+		}, new KeyLetterProvider() {
+			public String getKey_lett() {
+				return ee.getKey_lett();
+			}
+		});
+
+		// try to rename a class with a defaulted key letter
+		final ModelClass_c modelClass = ModelClass_c.ModelClassInstance(modelRoot);
+		modelClass.setKey_lett(Os_c.Remove_spaces(modelClass.getName()));
+		checkDefaultedKeyLetterRenamed(modelClass, new NameProvider() {
+			public String getName() {
+				return modelClass.getName();
+			}
+		}, new KeyLetterProvider() {
+			public String getKey_lett() {
+				return modelClass.getKey_lett();
+			}
+		});
+	}
+
+	/**
+	 * Tests that the renaming of a model element doesn't update a 
+	 * non-defaulted key letter field.
+	 */
+	@Test
+	public void testRenameNotUpdateNonDefaultKeyLetter() {
+		// try to rename a class with a defaulted key letter
+		final ModelClass_c modelClass = ModelClass_c.ModelClassInstance(modelRoot);
+		modelClass.setKey_lett("CLA");
+		checkUnDefaultedKeyLetterNotRenamed(modelClass, new NameProvider() {
+			public String getName() {
+				return modelClass.getName();
+			}
+		}, new KeyLetterProvider() {
+			public String getKey_lett() {
+				return modelClass.getKey_lett();
+			}
+		});
+	}
+
+	/**
+	 * Callers to  are required to 
+	 * supply an instance of this that will provide the current key letter 
+	 * value of the model element that is also supplied to that method. 
+	 */
+	private interface KeyLetterProvider {
+		String getKey_lett();
+	}
+
+	/**
+	 * Checks that renaming the given element changes a defaulted key letter
+	 * value.
+	 * 
+	 * @param nameProvider      See parameter's type.  
+	 * @param keyLetterProvider See parameter's type.
+	 */
+	public void checkDefaultedKeyLetterRenamed(ModelElement element,
+			NameProvider nameProvider, KeyLetterProvider keyLetterProvider) {
+		String oldName = nameProvider.getName();
+		String newName = oldName + "1";
+		RenameAction.getRenameQuery(element, newName, oldName, true).run();
+		assertTrue("Defaulted key letter not changed.", 
+				keyLetterProvider.getKey_lett().equals(Os_c.Remove_spaces(newName)));
+	}
+
+	/**
+	 * Checks that renaming the given element doesn't change an undefaulted 
+	 * key letter value.
+	 * 
+	 * @param nameProvider      See parameter's type.  
+	 */
+	public void checkUnDefaultedKeyLetterNotRenamed(ModelElement element,
+			NameProvider nameProvider, KeyLetterProvider keyLetterProvider) {
+		String oldName = nameProvider.getName();
+		String newName = oldName + "1";
+		RenameAction.getRenameQuery(element, newName, oldName, true).run();
+		assertTrue("Undefaulted key letter changed.", 
+				!keyLetterProvider.getKey_lett().equals(newName));
 	}
 }

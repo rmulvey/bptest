@@ -10,6 +10,7 @@ import org.eclipse.core.runtime.Platform;
 import org.eclipse.ui.PlatformUI;
 import org.junit.After;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.TestName;
@@ -466,6 +467,7 @@ public class ModelMergeTests2  extends BaseTest {
 		}
 	}
 	
+	@Ignore
 	@Test
 	public void testContainerChangeMerging() throws Exception {
 		loadProject("MicrowaveOven");

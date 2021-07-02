@@ -13,6 +13,7 @@ import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;
 
+import org.eclipse.compare.internal.CompareDialog;
 import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.IProject;
 import org.eclipse.core.resources.ResourceAttributes;
@@ -272,7 +273,8 @@ public class TestUtil {
                                     && !(shell.getData() instanceof ProgressMonitorDialog)
                                     && !(shell.getData() instanceof BlockedJobsDialog)
                                     && (!shell.getText().equals("") || (shell.getText().equals("")
-                                            && shell.getData() instanceof WizardDialog))) {
+											&& (shell.getData() instanceof WizardDialog
+													|| shell.getData() instanceof CompareDialog)))) {
                                 // we have our new shell, process as we
                                 // did before
                                 processed = processor.processShell(shell);
@@ -298,11 +300,17 @@ public class TestUtil {
     }
 
     static Shell[] currentShells = null;
-
+    public static boolean wasCompareDialog = false;
     public static void dismissDialog(final long inHowManyMillis, final int currentRecursionDepth,
             final boolean shouldDismiss, final String button, final String treeItem, final boolean throwException) {
+    	wasCompareDialog = false;
         dismissShell(shell -> {
             dialogText = "";
+            if(shell.getData() instanceof CompareDialog) {
+            	// we do not have any labels are text, so toggle
+            	// a boolean for testing
+            	wasCompareDialog = true;
+            }
             // close the dialog
             Control[] ctrls = ((Dialog) shell.getData()).getShell().getChildren();
             for (int i = 0; i < ctrls.length; i++) {

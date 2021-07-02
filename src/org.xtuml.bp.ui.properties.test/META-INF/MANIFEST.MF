@@ -27,5 +27,5 @@ Require-Bundle: org.eclipse.core.runtime,
  org.xtuml.bp.ui.graphics,
  org.xtuml.bp.utilities
 Bundle-ActivationPolicy: lazy
-Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-RequiredExecutionEnvironment: JavaSE-11
 Automatic-Module-Name: org.xtuml.bp.ui.properties.test

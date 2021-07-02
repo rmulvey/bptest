@@ -779,7 +779,8 @@ ${result.body}
                 }
 
             }).getModelRoot());
-         
+         .elif(cme_entry.Label == "Make Local")
+		 $r{obj.Name}_c obj = $r{obj.Name}_c.$r{obj.Name}Instance(modelRoot, op -> Deferral_c.getOneO_DEFOnR126((Operation_c) op) != null);
          .else
 		 $r{obj.Name}_c obj = $r{obj.Name}_c.$r{obj.Name}Instance(modelRoot);
 		 .end if

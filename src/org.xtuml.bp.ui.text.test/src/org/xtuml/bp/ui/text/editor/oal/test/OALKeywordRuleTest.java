@@ -24,7 +24,7 @@ import org.xtuml.bp.test.common.OrderedRunner;
 import org.xtuml.bp.ui.text.OALEditorPlugin;
 import org.xtuml.bp.ui.text.editor.SyntaxHighlightingPreferences;
 import org.xtuml.bp.ui.text.editor.oal.OALKeywordRule;
-import org.xtuml.bp.ui.text.editor.oal.OALTokenTypes;
+import org.xtuml.bp.ui.text.editor.ActionLanguageTokenTypes;
 import org.xtuml.bp.ui.text.test.UITextTest;
 
 /**
@@ -51,7 +51,7 @@ public class OALKeywordRuleTest extends UITextTest
         // create our rule to be tested
         SyntaxHighlightingPreferences prefs = 
             OALEditorPlugin.getDefaultOALPlugin().getSyntaxHighlightingPreferences();        
-        IToken otherToken = prefs.getDefaultToken(OALTokenTypes.TOKEN_TYPE_other);
+        IToken otherToken = prefs.getDefaultToken(ActionLanguageTokenTypes.TOKEN_TYPE_other);
         OALKeywordRule rule = OALKeywordRule.createRule(prefs, otherToken);
         
         // for each of a number of test words that are or are not
@@ -60,7 +60,7 @@ public class OALKeywordRuleTest extends UITextTest
         boolean[] isKeyword = {true, true, true, false};
         RuleBasedScanner scanner = new RuleBasedScanner();
         IToken keywordToken = prefs.getDefaultToken(
-            OALTokenTypes.TOKEN_TYPE_keyword);
+            ActionLanguageTokenTypes.TOKEN_TYPE_keyword);
         for (int i = 0; i < words.length; i++) {
             // have our document be made up of just this word
             document.set(words[i]);

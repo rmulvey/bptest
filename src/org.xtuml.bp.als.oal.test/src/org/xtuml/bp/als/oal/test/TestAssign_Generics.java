@@ -749,15 +749,19 @@ public class TestAssign_Generics extends TestCase {
 	public void testAssignTime2Date() throws RecognitionException, TokenStreamException {
 		String act = "d = TIM::current_date(); t = TIM::current_clock(); d = t;"; //$NON-NLS-1$
 		String x = OalParserTest_Generics.parseAction(act, OalParserTest_Generics.ACTIVITY_TYPE_FUNC, OalParserTest_Generics.TEST_VOID_NO_PARM);
-		assertEquals("", x);
-		OalParserTest_Generics.validateBlkStmtVal( 1, 3, 6 );
+		String lines[] = x.split("\n");//$NON-NLS-1$
+		assertEquals(":1:56-56: Variable ->d<- already exists as a different type", lines[0]);
+		assertEquals("line 1:58: expecting Semicolon, found 'null'", lines[1]);
+		OalParserTest_Generics.validateBlkStmtVal( 1, 2, 5 );
 	}
 	@Test
 	public void testAssignDate2Time() throws RecognitionException, TokenStreamException {
 		String act = "d = TIM::current_date(); t = TIM::current_clock(); t = d;"; //$NON-NLS-1$
 		String x = OalParserTest_Generics.parseAction(act, OalParserTest_Generics.ACTIVITY_TYPE_FUNC, OalParserTest_Generics.TEST_VOID_NO_PARM);
-		assertEquals("", x);
-		OalParserTest_Generics.validateBlkStmtVal( 1, 3, 6 );
+		String lines[] = x.split("\n");//$NON-NLS-1$
+		assertEquals(":1:56-56: Variable ->t<- already exists as a different type", lines[0]);
+		assertEquals("line 1:58: expecting Semicolon, found 'null'", lines[1]);
+		OalParserTest_Generics.validateBlkStmtVal( 1, 2, 5 );
 	}
 	@Test
 	public void testAssignUDT2DiffUDTSameCore() throws RecognitionException, TokenStreamException {

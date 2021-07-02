@@ -162,14 +162,14 @@ public class ModelComparisonTests extends BaseTest {
 			TreeDifferencer differencer = compareElementWithLocalHistory(instance,
 					copy);
 			assertTrue("No differences found for attribute value modification: "
-					+ modelPath, differencer.getLeftDifferences().size() != 0);
+					+ modelPath, differencer.getLeftDifferences(true).size() != 0);
 			assertTrue(
 					"More differences found for attribute value modification than expected.",
-					differencer.getLeftDifferences().size() == getExpectedSizeForChange(differencer, instance));
+					differencer.getLeftDifferences(true).size() == getExpectedSizeForChange(differencer, instance));
 			if(getExpectedSizeForChange(differencer, instance) == 1) {
 				assertTrue(
 						"Invalid difference type found for attribute value modification.",
-						differencer.getLeftDifferences().get(0).getType() == TreeDifference.VALUE_DIFFERENCE);
+						differencer.getLeftDifferences(true).get(0).getType() == TreeDifference.VALUE_DIFFERENCE);
 			}
 		} catch(Exception e) {
 			if(transaction != null) {
@@ -194,17 +194,17 @@ public class ModelComparisonTests extends BaseTest {
 		if(getName().contains("Layer_Name")) {
 			return 2;
 		}
-		if(differencer.getLeftDifferences().size() == 2) {
+		if(differencer.getLeftDifferences(true).size() == 2) {
 			// this could be rename, where the differences
 			// are shown both for the attribute and the root
 			// element
-			for(TreeDifference difference : differencer.getLeftDifferences()) {
+			for(TreeDifference difference : differencer.getLeftDifferences(true)) {
 				if(difference.getType().equals(TreeDifference.VALUE_DIFFERENCE)) {
 					ComparableTreeObject comparable = (ComparableTreeObject) difference.getElement();
 					if(comparable.getRealElement() instanceof ObjectElement) {
 						ObjectElement obEle = (ObjectElement) comparable.getRealElement();
-						ComparableTreeObject one = new NonRootModelElementComparable((NonRootModelElement) testElement);
-						ComparableTreeObject two = new NonRootModelElementComparable((NonRootModelElement) obEle.getParent());
+						ComparableTreeObject one = new NonRootModelElementComparable((NonRootModelElement) testElement, false);
+						ComparableTreeObject two = new NonRootModelElementComparable((NonRootModelElement) obEle.getParent(), false);
 						if(one.equals(two)) {
 							return 2;
 						} else {
@@ -220,15 +220,15 @@ public class ModelComparisonTests extends BaseTest {
 					return 1;
 				}
 			}
-		} else if(differencer.getLeftDifferences().size() == 3) {
+		} else if(differencer.getLeftDifferences(true).size() == 3) {
 			int count = 0;
-			for(TreeDifference difference : differencer.getLeftDifferences()) {
+			for(TreeDifference difference : differencer.getLeftDifferences(true)) {
 				if(difference.getType().equals(TreeDifference.VALUE_DIFFERENCE)) {
 					ComparableTreeObject comparable = (ComparableTreeObject) difference.getElement();
 					if(comparable.getRealElement() instanceof ObjectElement) {
 						ObjectElement obEle = (ObjectElement) comparable.getRealElement();
-						ComparableTreeObject one = new NonRootModelElementComparable((NonRootModelElement) testElement);
-						ComparableTreeObject two = new NonRootModelElementComparable((NonRootModelElement) obEle.getParent());
+						ComparableTreeObject one = new NonRootModelElementComparable((NonRootModelElement) testElement, false);
+						ComparableTreeObject two = new NonRootModelElementComparable((NonRootModelElement) obEle.getParent(), false);
 						if(one.equals(two)) {
 							if(count == 1) {
 								count++;

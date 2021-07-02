@@ -1,5 +1,6 @@
 package org.xtuml.bp.debug.test;
 
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
@@ -249,4 +250,51 @@ public class BPTestLaunchConfiguration implements ILaunchConfiguration {
     public boolean hasAttribute(String attributeName) throws CoreException {
         return false;
     }
+
+	@Override
+	public void delete(int arg0) throws CoreException {
+		// fulfilling contract requirements
+	}
+
+	@Override
+	public int getKind() throws CoreException {
+		// fulfilling contract requirements
+		return 0;
+	}
+
+	@Override
+	public ILaunchConfiguration getPrototype() throws CoreException {
+		// fulfilling contract requirements
+		return null;
+	}
+
+	@Override
+	public Collection<ILaunchConfiguration> getPrototypeChildren() throws CoreException {
+		// fulfilling contract requirements
+		return null;
+	}
+
+	@Override
+	public Set<String> getPrototypeVisibleAttributes() throws CoreException {
+		// fulfilling contract requirements
+		return null;
+	}
+
+	@Override
+	public boolean isAttributeModified(String arg0) throws CoreException {
+		// fulfilling contract requirements
+		return false;
+	}
+
+	@Override
+	public boolean isPrototype() {
+		// fulfilling contract requirements
+		return false;
+	}
+
+	@Override
+	public void setPrototypeAttributeVisibility(String arg0, boolean arg1) throws CoreException {
+		// fulfilling contract requirements	
+	}
+    
 }

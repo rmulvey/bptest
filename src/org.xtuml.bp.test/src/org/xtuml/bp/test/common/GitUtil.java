@@ -105,6 +105,8 @@ public class GitUtil {
 		
 	UITestingUtilities.expandTree(repoItem, 3);
 	BaseTest.dispatchEvents();
+	repoItem = UITestingUtilities.findItemInTree(gitRepositoryTree,
+			repoString);
 		
 	TreeItem projectItem = UITestingUtilities.findItemInWorkingTree(repoItem, projectName);				
 

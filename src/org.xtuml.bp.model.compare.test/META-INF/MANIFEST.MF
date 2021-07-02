@@ -19,6 +19,6 @@ Require-Bundle: org.eclipse.ui,
  org.eclipse.team.core,
  org.xtuml.bp.ui.explorer,
  org.eclipse.ui.navigator
-Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-RequiredExecutionEnvironment: JavaSE-11
 Bundle-ActivationPolicy: lazy
 Automatic-Module-Name: org.xtuml.bp.model.compare.test

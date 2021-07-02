@@ -121,6 +121,8 @@ import org.xtuml.bp.core.common.Transaction;
 import org.xtuml.bp.core.common.TransactionManager;
 import org.xtuml.bp.core.ui.perspective.BridgePointPerspective;
 import org.xtuml.bp.io.mdl.ImportModel;
+import org.xtuml.bp.model.compare.ComparePlugin;
+import org.xtuml.bp.model.compare.preferences.ModelComparePreferenceStore;
 import org.xtuml.bp.test.GlobalsTestEnabler;
 import org.xtuml.bp.test.TestUtil;
 import org.xtuml.bp.ui.canvas.Ooaofgraphics;
@@ -312,6 +314,9 @@ public class BaseTest extends TestCase {
 				.setValue(BridgePointPreferencesStore.DEFAULT_ACTION_LANGUAGE_DIALECT, 0);
 		CorePlugin.getDefault().getPreferenceStore()
 				.setValue(BridgePointPreferencesStore.REQUIRE_MASL_STYLE_IDENTIFIERS, false);
+		
+		// set model/compare to ignore graphical conflicts
+		ComparePlugin.getDefault().getPreferenceStore().setValue(ModelComparePreferenceStore.IGNORE_GRAPHICAL_CONFLICTS, true);
 	}
 	public void setUp() throws Exception {
 		super.setUp();

@@ -354,32 +354,23 @@ public class FormalizeUnformalizeTestGenerics extends CanvasTest {
   	private void verifyRefAttrDatatype(GraphicalElement_c ge2) {
 		if (ge2.getRepresents() instanceof Association_c) { 
 			Association_c assoc = (Association_c) ge2.getRepresents();
-			Attribute_c[] attr_set = Attribute_c.getManyO_ATTRsOnR105(ClassIdentifierAttribute_c.getManyO_OIDAsOnR105(ClassIdentifier_c.getManyO_IDsOnR109(ReferredToClassInAssoc_c
-							..getManyR_RTOsOnR203(ClassInAssociation_c.getManyR_OIRsOnR201(assoc)))));
 			Attribute_c[] attr_refs = Attribute_c.getManyO_ATTRsOnR106(
 	                ReferentialAttribute_c.getManyO_RATTRsOnR108(
 	                AttributeReferenceInClass_c.getManyO_REFsOnR111(
 	                        ReferringClassInAssoc_c.getManyR_RGOsOnR203(
 	                                ClassInAssociation_c.getManyR_OIRsOnR201(assoc)))));
-			for (int i = 0; i < attr_set.length; ++i) {
-				for(int j = 0; j < attr_refs.length; j++) {
-					assertEquals(attr_set[i].getDt_id(), attr_refs[j].getDt_id());
-				}
+			for(int j = 0; j < attr_refs.length; j++) {
+				assertEquals(getSameAsBaseAttributeUUID(), attr_refs[j].getDt_id());
 			}
         }
         else if (ge2.getRepresents() instanceof ClassAsLink_c) { 
             ClassAsLink_c cal = (ClassAsLink_c)ge2.getRepresents();
-            Association_c assoc = Association_c.getOneR_RELOnR206(LinkedAssociation_c.getManyR_ASSOCsOnR211(cal));
-			Attribute_c[] attr_set = Attribute_c.getManyO_ATTRsOnR105(ClassIdentifierAttribute_c.getManyO_OIDAsOnR105(ClassIdentifier_c.getManyO_IDsOnR109(ReferredToClassInAssoc_c
-							..getManyR_RTOsOnR203(ClassInAssociation_c.getManyR_OIRsOnR201(assoc)))));
 			Attribute_c[] attr_refs = Attribute_c.getManyO_ATTRsOnR106(
 	                ReferentialAttribute_c.getManyO_RATTRsOnR108(
 	                AttributeReferenceInClass_c.getManyO_REFsOnR111(
 	                        ReferringClassInAssoc_c.getManyR_RGOsOnR205(cal))));
-			for (int i = 0; i < attr_set.length; ++i) {
-				for(int j = 0; j < attr_refs.length; j++) {
-					assertEquals(attr_set[i].getDt_id(), attr_refs[j].getDt_id());
-				}
+			for(int j = 0; j < attr_refs.length; j++) {
+				assertEquals(getSameAsBaseAttributeUUID(), attr_refs[j].getDt_id());
 			}
         }
 	}

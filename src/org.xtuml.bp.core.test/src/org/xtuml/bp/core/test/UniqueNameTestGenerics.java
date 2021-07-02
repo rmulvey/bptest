@@ -25,6 +25,7 @@ import org.eclipse.core.runtime.NullProgressMonitor;
 import org.eclipse.swt.widgets.Display;
 import org.junit.After;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.xtuml.bp.core.ModelClass_c;
@@ -93,6 +94,7 @@ public class UniqueNameTestGenerics extends BaseTest {
 	 * @throws Exception
 	 */
 	@Test
+	@Ignore
 	public void testUniqueSubsystemName() throws Exception {
 
 		Package_c dom = Package_c.PackageInstance(modelRoot,
@@ -125,6 +127,7 @@ public class UniqueNameTestGenerics extends BaseTest {
 	}
 
 	@Test
+	@Ignore
 	public void testUniqueModelClassName() throws Exception {
 		//test unique model class name
 		ModelClass_c[] mcs1 = ModelClass_c.ModelClassInstances(modelRoot);

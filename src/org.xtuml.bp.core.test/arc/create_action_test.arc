@@ -139,8 +139,6 @@
     .assign attr_result = true
    .elif(kl == "SQ_PP") 
      .assign attr_result = true
-   .elif(kl == "D_DEPL") 
-     .assign attr_result = true
   .end if
 .end function
 .//
@@ -164,7 +162,11 @@
   .if (action.Key_Lett == "S_SYS")
       .assign root = "Ooaofooa.getDefaultInstance()"
   .end if
-        ${ocn.body} t1 = ${ocn.body}.${oa.body}(${root});
+  .assign criteria = ""
+  .if (action.Key_Lett == "SM_EVT")
+    .assign criteria = ", e -> LocalEvent_c.getOneSM_LEVTOnR526(SemEvent_c.getOneSM_SEVTOnR525((StateMachineEvent_c) e)) != null"
+  .end if
+        ${ocn.body} t1 = ${ocn.body}.${oa.body}(${root}${criteria});
         assertNotNull(t1);
   .assign oldName = "Old_Name";
   .assign newName = "New_Name"+"$r{action.Key_Lett}";
@@ -1055,8 +1057,6 @@ ${cdat.body}\
      .assign attr_result = true
     .elif(kl == "UC_UCC") 
      .assign attr_result = true 
-   .elif(kl == "D_DEPL") 
-     .assign attr_result = true
   .end if
 .end function
 .//

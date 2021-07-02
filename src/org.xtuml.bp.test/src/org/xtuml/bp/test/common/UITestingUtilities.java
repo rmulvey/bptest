@@ -51,6 +51,7 @@ import org.eclipse.ui.IWorkbenchPage;
 import org.eclipse.ui.IWorkbenchWindow;
 import org.eclipse.ui.PlatformUI;
 import org.eclipse.ui.views.properties.PropertySheet;
+import org.junit.Assert;
 import org.xtuml.bp.core.Ooaofooa;
 import org.xtuml.bp.core.common.ClassQueryInterface_c;
 import org.xtuml.bp.core.common.ModelRoot;
@@ -79,8 +80,6 @@ import org.xtuml.bp.ui.graphics.parts.GraphicalZoomManager;
 import org.xtuml.bp.utilities.ui.CanvasUtilities;
 
 import junit.framework.TestCase;
-
-import org.junit.Assert;
 
 public class UITestingUtilities {
 	private static Point fDownLocation;
@@ -190,6 +189,16 @@ public class UITestingUtilities {
 
 		return items;
 
+	}
+	
+	public static void doubleClickTreeItem(TreeItem item) {
+		Event event = new Event();
+		event.widget = item.getParent();
+		event.item = item;
+		event.type = SWT.DefaultSelection;
+		item.getParent().setSelection(item);
+		item.getParent().notifyListeners(SWT.DefaultSelection, event);
+		BaseTest.dispatchEvents();
 	}
 	
 	private static MenuItem[] getChildMenuItems(Menu menu, String childMenu) {
@@ -1009,6 +1018,9 @@ public class UITestingUtilities {
 	 * that contains the given text.  It does not do an exact match.
 	 */
 	public static TreeItem findItemInTree(TreeItem item, String name) {
+		if(item.isDisposed()) {
+			return null;
+		}
 		if(item.getText().contains(name)) {
 			return item;
 		} else {

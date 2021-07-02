@@ -316,7 +316,7 @@ public class TigerNatureTestGenerics extends CanvasTest {
 						"Test Project Non-Defaults"));
 		assertTrue(
 				"Project is not shown in the resource view as a xtUML project",
-				checkResourceNavForxtUMLProject("Test Project Non-Defaults"));
+				checkResourceNavForxtUMLProject("Test Project Non-Defaults (in tiger_test)"));
 
 		assertTrue("Project not created where specified", loc.exists());
 	}

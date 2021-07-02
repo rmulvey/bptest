@@ -31,9 +31,18 @@
 .function get_ref_value
   .param inst_ref child_node   .// T_TNS
   .param string child_var_name
+  .print "Child Node: ${child_node.Key_Lett}"
   .//
   .if ( child_node.Key_Lett == "R_REL" )
             "R$${${child_var_name}.Numb}" },
+  .elif ( child_node.Key_Lett == "R_SUPER" )
+  ..select one assoc related by R_SUPERclass->R_SUBSUP[R212]->R_REL[R206]
+     ..assign result = assoc.Numb;
+  			"$${result}" },
+  .elif ( child_node.Key_Lett == "R_SUB" )
+  ..select one assoc related by R_SUBclass->R_SUBSUP[R213]->R_REL[R206]
+     ..assign result = assoc.Numb;
+  			"$${result}" },
   .elif ( child_node.Key_Lett == "O_IOBJ" )
     ..select one obj related by O_IOBJclass->O_OBJ[R101]
             "$${obj.Name}" },
@@ -357,6 +366,15 @@ public class ${class_name} extends BaseTest
 				});
     .elif((node.Key_Lett == "S_UDT") or (node.Key_Lett == "S_CDT"))
         ${formatted_name.body} inst = ${formatted_name.body}.${gia.body}(Ooaofooa.getDefaultInstance());
+    .elif(node.Key_Lett == "R_REL")
+    ${formatted_name.body} inst = ${formatted_name.body}.${gia.body}(modelRoot, new ClassQueryInterface_c() {
+					
+					@Override
+					public boolean evaluate(Object candidate) {
+						Association_c assoc = (Association_c) candidate;
+						return assoc.getNumb() != 100;
+					}
+				});
     .else
         ${formatted_name.body} inst = ${formatted_name.body}.${gia.body}(modelRoot);
     .end if
@@ -470,6 +488,8 @@ public class ${class_name}Data
   .elif(node.Key_Lett == "SM_STATE")
   ..select any cclass from instances of O_OBJ where (selected.Name == "C class")
   ..select any ${mm_obj_var} related by cclass->SM_ISM[R518]->SM_SM[R517]->SM_STATE[R501]
+  .elif(node.Key_Lett == "R_REL")
+  ..select any ${mm_obj_var} from instances of ${meta_model_obj.Key_Lett} where (selected.Numb != 100)
   .else
   ..select any ${mm_obj_var} from instances of ${meta_model_obj.Key_Lett}
   .end if

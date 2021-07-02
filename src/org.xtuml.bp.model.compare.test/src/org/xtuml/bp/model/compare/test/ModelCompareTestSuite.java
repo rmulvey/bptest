@@ -29,6 +29,7 @@ import junit.framework.TestSuite;
 	ElementOrderingTests.class,
 	ModelMergeTests.class,
 	ModelMergeTests2.class,
+	CompareOpenActionTest.class
 })
 public class ModelCompareTestSuite extends TestSuite {
 
